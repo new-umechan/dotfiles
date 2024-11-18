@@ -142,6 +142,24 @@ require("lazy").setup({
 		tag = "0.1.5",
 	},
 
+	-- telescope速く
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = "make", -- 初回インストール時にCコードをビルドする
+		config = function()
+			require("telescope").load_extension("fzf")
+		end,
+	},
+
+	-- telescope拡張　いろんな要素を考慮してfuzzyFindしてくれる
+	{
+		"danielfalk/smart-open.nvim",
+		dependencies = {
+			"kkharji/sqlite.lua", -- Frecencyデータの保存用
+			"nvim-telescope/telescope-fzf-native.nvim", -- 高速なFZFサポート
+		},
+	},
+
 	-- カラーコードプレビュー
 	{
 		"norcalli/nvim-colorizer.lua",
