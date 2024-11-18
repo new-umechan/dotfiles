@@ -9,7 +9,8 @@ macOS m1
 1. Install
 
    ```zsh
-   ./install.sh
+   cd dotfiles
+   ./.bin/install.sh
    ```
 
 
