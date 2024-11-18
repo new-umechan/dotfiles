@@ -16,6 +16,7 @@ install_tools() {
   # 必要なツールのインストール
   brew update
   brew install trash
+  brew install zsh
 
   echo "Tools installation completed!"
 }
