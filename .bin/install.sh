@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -ue
 
 helpmsg() {
@@ -46,11 +46,15 @@ while [ $# -gt 0 ];do
   shift
 done
 
-# プラグインinstall
-if [ -f "./.bin/install_zsh_plugins.sh" ]; then
-	zsh ./.bin/install_zsh_plugins.sh
+
+script_dir="$(cd "$(dirname "$0")" && pwd -P)"
+
+# Homebrewインストールスクリプトの呼び出し
+if [ -f "$script_dir/brewinstall.sh" ]; then
+  bash "$script_dir/brewinstall.sh"
 else
-  echo "Plugin installation script not found!"
+  echo "brewinstall.sh not found!"
+  exit 1
 fi
 
 link_to_homedir
