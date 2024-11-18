@@ -1,3 +1,5 @@
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+
 PROMPT='%~ > '
 RPROMPT=''
 
@@ -55,42 +57,56 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 	########################################
 
 #=============================
-# source zsh-syntax-highlighting
-#=============================
-if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-	source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
+# # source zsh-syntax-highlighting
+# #=============================
+# if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+# 	source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# fi
+#
+# #=============================
+# # source zsh-autosuggestions
+# #=============================
+# if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+# 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# fi
+#
+# #=============================
+# # source zsh-completions
+# #=============================
+# if [ -f ~/.zsh/zsh-completions/zsh-completions.zsh ]; then
+# 	source ~/.zsh/zsh-completions/zsh-completions.zsh
+# fi
+#
+# #=============================
+# # source zsh-history-substring-search
+# #=============================
+# if [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
+# 	source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+# fi
 
 #=============================
-# source zsh-autosuggestions
+# zsh-syntax-highlighting（遅延ロード）
 #=============================
-if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
+zinit ice wait"2"
+zinit light zsh-users/zsh-syntax-highlighting
 
 #=============================
-# source zsh-completions
+# zsh-autosuggestions（遅延ロード + キーバインド設定）
 #=============================
-if [ -f ~/.zsh/zsh-completions/zsh-completions.zsh ]; then
-	source ~/.zsh/zsh-completions/zsh-completions.zsh
-fi
+zinit ice wait"1" atload"bindkey '^I' autosuggest-accept"
+zinit light zsh-users/zsh-autosuggestions
 
 #=============================
-# source zsh-history-substring-search
+# zsh-completions（即時ロード）
 #=============================
-if [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-	source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
-fi
+zinit ice wait"0"
+zinit light zsh-users/zsh-completions
 
-# color
-
-# 下線を削除するために、zsh-syntax-highlightingのスタイルを設定
-ZSH_HIGHLIGHT_STYLES[path]='none'
-
-# コマンドの色を設定
-for style in command builtin reserved-word alias function; do
-	ZSH_HIGHLIGHT_STYLES[$style]='fg=#B2BD79'
-done
+#=============================
+# zsh-history-substring-search（特定キーでロード）
+#=============================
+zinit ice atload"bindkey '^R' history-substring-search-up; bindkey '^S' history-substring-search-down"
+zinit light zsh-users/zsh-history-substring-search
 
 # ------ キーバインド -----------------------
 
@@ -123,3 +139,41 @@ alias dt="echo '\033[1;34m'$(date '+%Y/%m/%d')'\033[0m'"
 if [ -f ~/.zprofile ]; then
 	source ~/.zprofile
 fi
+
+# プラグインディレクトリ
+PLUGIN_DIR="$HOME/.dotfiles/.zsh"
+
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zdharma-continuum/zinit-annex-as-monitor \
+    zdharma-continuum/zinit-annex-bin-gem-node \
+    zdharma-continuum/zinit-annex-patch-dl \
+    zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
+
+# Plugins managed by Zinit
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-history-substring-search
+
+# color
+
+# 下線を削除するために、zsh-syntax-highlightingのスタイルを設定
+ZSH_HIGHLIGHT_STYLES[path]='none'
+
+# コマンドの色を設定
+for style in command builtin reserved-word alias function; do
+	ZSH_HIGHLIGHT_STYLES[$style]='fg=#B2BD79'
+done
+
+# 全ての設定が終わってから
+bindkey '^[[A' history-substring-search-up    # 上矢印キーで履歴を上に移動
+bindkey '^[[B' history-substring-search-down  # 下矢印キーで履歴を下に移動
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down

@@ -46,6 +46,13 @@ while [ $# -gt 0 ];do
   shift
 done
 
+# プラグインinstall
+if [ -f "./.bin/install_zsh_plugins.sh" ]; then
+	zsh ./.bin/install_zsh_plugins.sh
+else
+  echo "Plugin installation script not found!"
+fi
+
 link_to_homedir
 git config --global include.path "~/.gitconfig_shared"
-command echo -e "\e[1;36m Install completed!!!! \e[m"
+command print -e "\e[1;36m Install completed!!!! \e[m"
