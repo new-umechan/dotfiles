@@ -23,13 +23,10 @@ require("lazy").setup({
 	-- ファイルツリー
 	{
 		"nvim-tree/nvim-tree.lua",
-		  cmd = { "NvimTreeToggle", "NvimTreeFindFile" }, -- コマンド実行時にのみロード
+		cmd = { "NvimTreeToggle", "NvimTreeFocus" },
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		keys = {
-			{ "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle NvimTree" },
-		},
 		config = function()
-			require("nvim-tree").setup()
+			require("ume.plugins.nvim-tree").setup()
 		end,
 	},
 

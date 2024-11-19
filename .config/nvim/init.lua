@@ -2,7 +2,6 @@ require('ume/basic_config')
 require('ume/setup_plugin')
 require('ume/keymap')
 vim.cmd('colorscheme iceberg')
-require('ume/plugins/nvim_tree')
 
 -- icebergへの不満箇所
 vim.api.nvim_set_hl(0, "WinSeparator", { bg = "#0f1117", fg = "#0f1117" })

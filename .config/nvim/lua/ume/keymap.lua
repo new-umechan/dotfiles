@@ -68,9 +68,9 @@ vim.keymap.set('n', '<space>t', ':ToggleTerm<CR>', { noremap = true, silent = tr
 
 -- treesj
 -- 上二つはあんまつかわん
--- vim.keymap.set("n", "<leader>j", require("treesj").toggle, { desc = "Toggle Treesj" })
--- vim.keymap.set("n", "<leader>s", require("treesj").split, { desc = "Split Treesj" })
-vim.keymap.set("n", "<leader>m", require("treesj").join, { desc = "Join Treesj" })
+vim.keymap.set("n", "<leader>j", require("treesj").join, { desc = "Toggle Treesj" })
+vim.keymap.set("n", "<leader>s", require("treesj").split, { desc = "Split Treesj" })
+vim.keymap.set("n", "<leader>m", require("treesj").toggle, { desc = "Join Treesj" })
 
 -- lazy
 vim.keymap.set('n', '<space>ll', ':Lazy<CR>', { noremap = true, silent = true})
