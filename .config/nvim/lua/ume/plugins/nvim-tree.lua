@@ -41,13 +41,12 @@ M.setup = function()
 				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 			end
 
-			-- Default mappings. Feel free to modify or remove as needed.
-			vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
-			vim.keymap.set('n', 'o', api.node.open.edit, opts('Open'))
+			api.config.mappings.default_on_attach(bufnr)
+
 			vim.keymap.set('n', 't', api.fs.create, opts('Create'))
 			vim.keymap.set('n', 'n', api.fs.create, opts('Create'))
+			vim.keymap.set('n', 'y', api.fs.copy.node, opts('Yank'))
 			vim.keymap.set('n', 'd', api.fs.trash, opts('Trash'))
-			vim.keymap.set('n', 'r', api.fs.rename, opts('Rename'))
 			vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open in Vertical Split'))  -- 垂直分割
 
 		end,
