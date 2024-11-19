@@ -93,7 +93,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 #=============================
 # zsh-autosuggestions（遅延ロード + キーバインド設定）
 #=============================
-zinit ice wait"1" atload"bindkey '^I' autosuggest-accept"
+zinit ice wait"1" atload"bindkey '^E' autosuggest-accept"
 zinit light zsh-users/zsh-autosuggestions
 
 #=============================
@@ -124,8 +124,6 @@ fnv() {
 	local dir
 	dir=$(find . -type d \( ! -path '*/.*' ${EXCLUDE_PATHS} \) | fzf) && nvim "$dir"
 }
-
-# bindkey '^I' autosuggest-accept
 
 alias nv='nvim'
 alias cl='clear'

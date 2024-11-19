@@ -286,10 +286,12 @@ require("lazy").setup({
 		end
 	},
 
-	-- flash
+	-- Jump系プラグイン 使いこなせたらとてつもなく便利そう
 	 { import = "ume.plugins.flash" },
 
+
 }, {
+
 	ui = {
 		border = "rounded", -- ボーダースタイルを指定（rounded, single, double, solid, shadowなど）
 		colors = {

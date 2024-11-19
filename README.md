@@ -28,3 +28,5 @@ macOS m1
 
 Enjoy!
 
+### TODO
+- [ ] zsh plugin
