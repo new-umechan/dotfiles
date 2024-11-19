@@ -1,5 +1,5 @@
 -- neovimのもともとの機能を消す
-vim.g.loaded_netrw = 1
+vim.g.loa,ed_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- lazy.nvimのインストールコード
@@ -269,8 +269,9 @@ require("lazy").setup({
 		cmd = { "ToggleTerm", "TermExec" },
 		config = function()
 			require('toggleterm').setup({
-				size = 20, -- サイズはフローティングウィンドウの場合は無視される
-				direction = 'float', -- フローティングウィンドウを指定
+				size = 60,
+				direction = 'vertical',
+				-- floatとhorizontalもあるよ
 				float_opts = {
 					border = 'curved', -- ボーダーのスタイル（curved, double, single, shadow など）
 				},
@@ -278,8 +279,12 @@ require("lazy").setup({
 				start_in_insert = true, -- ターミナルを開いたら挿入モードでスタート
 			})
 
-			-- フローティングターミナル用のキーマッピング
-			vim.keymap.set('n', '<space>t', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = 'Toggle Floating Terminal' })
+			function _G.set_terminal_keymaps()
+				local opts = { noremap = true, silent = true }
+				vim.api.nvim_buf_set_keymap(0, 't', '<Esc>', [[<C-\><C-n>]], opts) -- 通常モードに戻る
+			end
+
+			vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 		end
 	},
 

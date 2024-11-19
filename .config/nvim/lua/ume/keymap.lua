@@ -75,3 +75,6 @@ vim.keymap.set("n", "<leader>m", require("treesj").toggle, { desc = "Join Treesj
 -- lazy
 vim.keymap.set('n', '<space>ll', ':Lazy<CR>', { noremap = true, silent = true})
 vim.keymap.set('n', '<space>lp', ':Lazy profile<CR>', { noremap = true, silent = true})
+
+-- terminalを出す
+vim.keymap.set('n', '<space>t', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = 'Toggle Floating Terminal' })

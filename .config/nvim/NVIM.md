@@ -55,8 +55,7 @@ mv my-setting-of-neovim nvim
 	  → 結構3時間かかった
 - [x] packerからlazy.nvimへの移行をする
 - [x] snipetをつける(cmainで#include~ が入力できるなど)
-- [ ] キーマップをわかりやすくする which-key.nvim
-- [ ] nvim-treeで削除したファイルが、ゴミ箱へいくようにする
+- [x] nvim-treeで削除したファイルが、ゴミ箱へいくようにする
 - [x] hop.nvimを変える → flash.nvimへ
 - [ ] 遅延読み込みで起動時間50msを目指す
     - [x] 100msを切る
@@ -74,6 +73,9 @@ mv my-setting-of-neovim nvim
 - [ ] デフォルトのファイラーをoil.nvimにする<br>
       → ファイルツリーの常駐がないのはきつい
 	   つかいこなせたらVimmer感はでるが
+- [ ] キーマップをわかりやすくする which-key.nvim-tree
+	  → わかりやすさよりうるささが上回った。もし、<space>から<br>
+		のみ始められるのであれば考えるかも
 - [ ] no neck pain使用
 	  → 画面遷移がめんどい
 	  隙間が気になる
