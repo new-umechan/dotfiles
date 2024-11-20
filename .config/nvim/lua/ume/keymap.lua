@@ -67,9 +67,6 @@ vim.api.nvim_set_keymap('n', '<leader>g', ':LazyGit<CR>', { noremap = true, sile
 vim.keymap.set('n', '<space>t', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = 'Toggle Terminal' })
 
 -- treesj
--- 上二つはあんまつかわん
-vim.keymap.set("n", "<leader>j", require("treesj").join, { desc = "Toggle Treesj" })
-vim.keymap.set("n", "<leader>s", require("treesj").split, { desc = "Split Treesj" })
 vim.keymap.set("n", "<leader>m", require("treesj").toggle, { desc = "Join Treesj" })
 
 -- lazy
@@ -78,3 +75,6 @@ vim.keymap.set('n', '<space>lp', ':Lazy profile<CR>', { noremap = true, silent =
 
 -- terminalを出す
 vim.keymap.set('n', '<space>t', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = 'Toggle Floating Terminal' })
+
+-- surroundのため
+vim.keymap.set({ "n", "x" }, "s", "<nop>", { desc = "Disable default s" }) -- sを無効化

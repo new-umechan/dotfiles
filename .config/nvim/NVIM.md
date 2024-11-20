@@ -67,6 +67,8 @@ mv my-setting-of-neovim nvim
     - [x] insert modeでemacsの基本操作ができるようにする
     - [ ] 検索を、ローマ字でできるようにする
     - [ ] IMEをnormalモード時にオフにする
+- [ ] %強化 treesitter 
+- [ ] flash.nvimが、surround.nvimと被っているので変える
 
 ### やめた
 - [ ] 変数への定義ジャンプをつくる →　個人的につかわないな

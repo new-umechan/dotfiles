@@ -17,22 +17,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	-- カラースキーム
-	{ "iceberg.vim", lazy = true, event = "VeryLazy" },
-
-	-- ファイルツリー
-	{
-		"nvim-tree/nvim-tree.lua",
-		cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("ume.plugins.nvim-tree").setup()
-		end,
-	},
-
+	{ import = "ume.plugins.iceberg"}, -- カラースキーム
+	{ import = "ume.plugins.nvim-tree"}, --	 ファイルツリー
 	-- 基本依存プラグイン
 	{ "nvim-lua/plenary.nvim" },
-
 	-- 自動保存
 	{ "pocco81/auto-save.nvim" },
 
@@ -86,17 +74,7 @@ require("lazy").setup({
 		end,
 	},
 
-	-- treesitterを用いた行の結合
-	{
-		"Wansmer/treesj",
-		keys = {
-			{ "<space>m", "<cmd>TSJToggle<CR>", desc = "Toggle Treesitter Join/Split" }
-		},
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		config = function()
-			require("treesj").setup()
-		end,
-	},
+	{ import = "ume.plugins.treesj"},	-- 行の結合
 
 	-- ts用のautotag
 	{
@@ -185,32 +163,6 @@ require("lazy").setup({
 		end,
 	},
 
-	-- snippetプラグイン
-	{
-		"L3MON4D3/LuaSnip",
-		event = 'InsertEnter',
-		dependencies = {
-			"saadparwaiz1/cmp_luasnip", -- cmpとの連携
-			"rafamadriz/friendly-snippets", -- 汎用スニペット集
-		},
-		config = function()
-			local luasnip = require("luasnip")
-
-			-- カスタムスニペットのロード
-			local custom_snippets_path = vim.fn.expand("~/.config/nvim/lua/ume/snippets/")
-			if vim.fn.isdirectory(custom_snippets_path) == 1 then
-				require("luasnip.loaders.from_lua").load({
-					paths = custom_snippets_path,
-				})
-			else
-				vim.notify("Custom snippets path does not exist: " .. custom_snippets_path, vim.log.levels.WARN)
-			end
-
-			-- FriendlySnippetsをロード
-			require("luasnip.loaders.from_vscode").lazy_load()
-		end,
-	},
-
 	-- 補完
 	-- https://qiita.com/delphinus/items/fb905e452b2de72f1a0f#441-hrsh7thnvim-cmpを参考
 	{
@@ -233,64 +185,18 @@ require("lazy").setup({
 		end,
 	},
 
-	-- surround
-	{
-		"kylechui/nvim-surround",
-		lazy = true;
-		config = function()
-			require("nvim-surround").setup({})
-		end,
-	},
+	-- 編集強化
+	{ import = "ume.plugins.surround"},	-- かっこ編集
+	{ import = "ume.plugins.dial"},	-- インクリメント、デクリメント強化
+	{ import = "ume.plugins.flash" }, 	-- Jump系プラグイン 使いこなせたらとてつもなく便利そう
+	{ import = "ume.plugins.luasnip"},	-- snipet
 
-	-- インクリメント・デクリメント
-	{
-		"monaqa/dial.nvim",
-		lazy = true,
-		config = function()
-			require("ume.plugins.dial")
-		end,
-	},
-
-	-- lazygit
-	{ "kdheepak/lazygit.nvim" },
-
-	-- gitsigns
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("ume.plugins.gitsigns").setup()
-		end,
-	},
+	-- git
+	{ "kdheepak/lazygit.nvim" }, -- nvim上git tui操作
+	{ import = "ume.plugins.gitsigns"},	-- 右側にgitの差分が出る
 
 	-- terminalをだす
-	{
-		'akinsho/toggleterm.nvim',
-		version = "*",
-		cmd = { "ToggleTerm", "TermExec" },
-		config = function()
-			require('toggleterm').setup({
-				size = 60,
-				direction = 'vertical',
-				-- floatとhorizontalもあるよ
-				float_opts = {
-					border = 'curved', -- ボーダーのスタイル（curved, double, single, shadow など）
-				},
-				shade_terminals = true, -- ターミナルの背景を暗くする
-				start_in_insert = true, -- ターミナルを開いたら挿入モードでスタート
-			})
-
-			function _G.set_terminal_keymaps()
-				local opts = { noremap = true, silent = true }
-				vim.api.nvim_buf_set_keymap(0, 't', '<Esc>', [[<C-\><C-n>]], opts) -- 通常モードに戻る
-			end
-
-			vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-		end
-	},
-
-	-- Jump系プラグイン 使いこなせたらとてつもなく便利そう
-	{ import = "ume.plugins.flash" },
-
+	{ import = "ume.plugins.toggleterm"},
 
 }, {
 
