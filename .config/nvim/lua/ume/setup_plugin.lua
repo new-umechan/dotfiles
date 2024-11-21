@@ -106,7 +106,9 @@ require("lazy").setup({
 	},
 
 	-- ファイルの高速実行
-	{ "thinca/vim-quickrun" },
+	-- { import = "ume.plugins.quickrun"},
+	{ import = "ume.plugins.overseer"},
+
 
 	-- エラー表示
 	{ "dense-analysis/ale", config = function() require('ume.plugins.ale') end },
@@ -199,34 +201,37 @@ require("lazy").setup({
 	{ import = "ume.plugins.toggleterm"},
 
 }, {
+		ui = {
+			border = "rounded", -- ボーダースタイルを指定（rounded, single, double, solid, shadowなど）
+			colors = {
+				background = "#161822", -- Icebergのダーク背景色
+				border = "#6b7089", -- ボーダー色（淡いグレー）
+				title = "#d2d4de", -- タイトルテキストの色（明るいグレー）
+				normal = "#c6c8d1", -- 通常のテキスト色（明るいグレー）
+				comment = "#6b7089", -- コメント色（落ち着いたグレー）
+				error = "#e27878", -- エラーテキストの色（赤みのある色）
+			},
+			notifications = {
+				enabled = false,
+			},
 
-	ui = {
-		border = "rounded", -- ボーダースタイルを指定（rounded, single, double, solid, shadowなど）
-		colors = {
-			background = "#161822", -- Icebergのダーク背景色
-			border = "#6b7089", -- ボーダー色（淡いグレー）
-			title = "#d2d4de", -- タイトルテキストの色（明るいグレー）
-			normal = "#c6c8d1", -- 通常のテキスト色（明るいグレー）
-			comment = "#6b7089", -- コメント色（落ち着いたグレー）
-			error = "#e27878", -- エラーテキストの色（赤みのある色）
 		},
-	},
-	-- 起動速度を早くするための確認用
-	-- :Lazy profileでわかる
-	performance = {
-		rtp = {
-			disabled_plugins = {
-				"gzip",
-				"tarPlugin",
-				"tohtml",
-				"zipPlugin",
-				"netrwPlugin",
-				"tutor",
-				"matchit", -- 使っていなければ無効化
-				"matchparen", -- 使っていなければ無効化
+		-- 起動速度を早くするための確認用
+		-- :Lazy profileでわかる
+		performance = {
+			rtp = {
+				disabled_plugins = {
+					"gzip",
+					"tarPlugin",
+					"tohtml",
+					"zipPlugin",
+					"netrwPlugin",
+					"tutor",
+					"matchit", -- 使っていなければ無効化
+					"matchparen", -- 使っていなければ無効化
+				},
 			},
 		},
-	},
-	debug = false, -- デバッグ情報 いちいちうるさいので、テスト中のみの適用をおすすめ
-	profiler = true, -- プロファイラーを有効化
-})
+		debug = false, -- デバッグ情報 いちいちうるさいので、テスト中のみの適用をおすすめ
+		profiler = true, -- プロファイラーを有効化
+	})

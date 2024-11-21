@@ -12,7 +12,7 @@ opt.smartindent = true
 -- カーソルが存在する行にハイライトを当ててくれます。
 opt.cursorline = true
 
-vim.opt.signcolumn = 'yes'
+opt.signcolumn = 'yes'
 
 -- カーソルが存在する列にハイライトを当てたい場合、下記をtrueにする。
 -- opt.cursorculumn = true
@@ -31,7 +31,7 @@ vim.o.relativenumber = true
 vim.o.numberwidth = 4
 
 -- コピペを簡単に
-vim.opt.clipboard:append({"unnamedplus"})
+opt.clipboard:append({"unnamedplus"})
 -- xは"_（ブラックホールレジスタ）へ保存
 vim.keymap.set('n', 'x', '"_x')
 

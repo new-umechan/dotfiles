@@ -1,6 +1,7 @@
 require('ume/basic_config')
-require('ume/setup_plugin')
 require('ume/keymap')
+require('ume/setup_plugin')
+require('ume/plug_keymap')
 vim.cmd('colorscheme iceberg')
 
 -- icebergへの不満箇所

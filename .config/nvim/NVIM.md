@@ -57,18 +57,19 @@ mv my-setting-of-neovim nvim
 - [x] snipetをつける(cmainで#include~ が入力できるなど)
 - [x] nvim-treeで削除したファイルが、ゴミ箱へいくようにする
 - [x] hop.nvimを変える → flash.nvimへ
+- [x] flash.nvimが、surround.nvimと被っているので変える
 - [ ] 遅延読み込みで起動時間50msを目指す
     - [x] 100msを切る
     - [x] 80ms
     - [ ] 50ms
 - [x] termianlを開けるようにする（<space>tとかかな）
-    - [ ] あとはVScodeっぽく下におけるようにしておきたい。
+    - [x] あとはVScodeっぽく下におけるようにしておきたい。
 - [ ] 日本語に対応させる
     - [x] insert modeでemacsの基本操作ができるようにする
     - [ ] 検索を、ローマ字でできるようにする
     - [ ] IMEをnormalモード時にオフにする
 - [ ] %強化 treesitter 
-- [ ] flash.nvimが、surround.nvimと被っているので変える
+- [ ] setup_plugins.luaを、importの書き方に統一
 
 ### やめた
 - [ ] 変数への定義ジャンプをつくる →　個人的につかわないな
