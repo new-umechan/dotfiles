@@ -27,7 +27,4 @@ vim.keymap.set('n', '<space>lp', ':Lazy profile<CR>', { noremap = true, silent =
 -- terminalを出す
 vim.keymap.set('n', '<space>t', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = 'Toggle Floating Terminal' })
 
--- surroundのため
-vim.keymap.set({ "n", "x" }, "s", "<nop>", { desc = "Disable default s" }) -- sを無効化
-
 vim.keymap.set( "n" , "<space>r", ":OverseerRun<CR>1<CR><CR>", { desc = "quick run" }) -- sを無効化
