@@ -171,16 +171,11 @@ require("lazy").setup({
 		"hrsh7th/nvim-cmp",
 		event = { "InsertEnter", "CmdlineEnter" }, -- 挿入モードとコマンドラインモードで遅延読み込み
 		dependencies = {
-			-- LSP用補完ソース
-			{ "hrsh7th/cmp-nvim-lsp", after = "nvim-cmp" },
-			-- バッファ補完ソース
-			{ "hrsh7th/cmp-buffer", after = "nvim-cmp" },
-			-- パス補完ソース
-			{ "hrsh7th/cmp-path", after = "nvim-cmp" },
-			-- コマンドライン補完ソース
-			{ "hrsh7th/cmp-cmdline", after = "nvim-cmp" },
-			-- LuaSnip用補完ソース
-			{ "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" },
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-cmdline",
+			"saadparwaiz1/cmp_luasnip",
 		},
 		config = function()
 			require("ume.plugins.nvim-cmp") -- 設定ファイルを呼び出す
@@ -201,37 +196,35 @@ require("lazy").setup({
 	{ import = "ume.plugins.toggleterm"},
 
 }, {
-		ui = {
-			border = "rounded", -- ボーダースタイルを指定（rounded, single, double, solid, shadowなど）
-			colors = {
-				background = "#161822", -- Icebergのダーク背景色
-				border = "#6b7089", -- ボーダー色（淡いグレー）
-				title = "#d2d4de", -- タイトルテキストの色（明るいグレー）
-				normal = "#c6c8d1", -- 通常のテキスト色（明るいグレー）
-				comment = "#6b7089", -- コメント色（落ち着いたグレー）
-				error = "#e27878", -- エラーテキストの色（赤みのある色）
-			},
-			notifications = {
-				enabled = false,
-			},
+	ui = {
+		border = "rounded", -- ボーダースタイルを指定（rounded, single, double, solid, shadowなど）
+		colors = {
+			background = "#161822", -- Icebergのダーク背景色
+			border = "#6b7089", -- ボーダー色（淡いグレー）
+			title = "#d2d4de", -- タイトルテキストの色（明るいグレー）
+			normal = "#c6c8d1", -- 通常のテキスト色（明るいグレー）
+			comment = "#6b7089", -- コメント色（落ち着いたグレー）
+			error = "#e27878", -- エラーテキストの色（赤みのある色）
+		},
+		notifications = {
+			enabled = false,
+		},
 
-		},
-		-- 起動速度を早くするための確認用
-		-- :Lazy profileでわかる
-		performance = {
-			rtp = {
-				disabled_plugins = {
-					"gzip",
-					"tarPlugin",
-					"tohtml",
-					"zipPlugin",
-					"netrwPlugin",
-					"tutor",
-					"matchit", -- 使っていなければ無効化
-					"matchparen", -- 使っていなければ無効化
-				},
+	},
+	-- 起動速度を早くするための確認用
+	-- :Lazy profileでわかる
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"tarPlugin",
+				"tohtml",
+				"zipPlugin",
+				"netrwPlugin",
+				"tutor",
 			},
 		},
-		debug = false, -- デバッグ情報 いちいちうるさいので、テスト中のみの適用をおすすめ
-		profiler = true, -- プロファイラーを有効化
-	})
+	},
+	debug = false, -- デバッグ情報 いちいちうるさいので、テスト中のみの適用をおすすめ
+	profiler = true, -- プロファイラーを有効化
+})
