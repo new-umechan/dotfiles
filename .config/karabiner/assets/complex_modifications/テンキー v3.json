@@ -1,20 +1,21 @@
 {
-	"title": "Personal rules (@swwwitch)",
-	"rules": [{
-		"description": "Fn+Number to KeyPad",
-		"manipulators": [{
-			"from": {
-				"key_code": "h",
-				"modifiers": {
-					"mandatory": ["fn"],
-					"optional": ["any"]
-				}
-			},
-			"to": [{
-				"key_code": "keypad_0"
-			}],
-			"type": "basic"
-		}, {
+	"title": "Ume rules",
+	"rules": [
+		{
+			"description": "Fn+Number to KeyPad",
+			"manipulators": [{
+				"from": {
+					"key_code": "h",
+					"modifiers": {
+						"mandatory": ["fn"],
+						"optional": ["any"]
+					}
+				},
+				"to": [{
+					"key_code": "keypad_0"
+				}],
+				"type": "basic"
+			}, {
 			"from": {
 				"key_code": "m",
 				"modifiers": {
@@ -26,7 +27,7 @@
 				"key_code": "keypad_1"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "comma",
 				"modifiers": {
@@ -38,7 +39,7 @@
 				"key_code": "keypad_2"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "period",
 				"modifiers": {
@@ -50,7 +51,7 @@
 				"key_code": "keypad_3"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "j",
 				"modifiers": {
@@ -62,7 +63,7 @@
 				"key_code": "keypad_4"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "k",
 				"modifiers": {
@@ -74,7 +75,7 @@
 				"key_code": "keypad_5"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "l",
 				"modifiers": {
@@ -86,7 +87,7 @@
 				"key_code": "keypad_6"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "u",
 				"modifiers": {
@@ -98,7 +99,7 @@
 				"key_code": "keypad_7"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "i",
 				"modifiers": {
@@ -110,7 +111,7 @@
 				"key_code": "keypad_8"
 			}],
 			"type": "basic"
-		}, {
+			}, {
 			"from": {
 				"key_code": "o",
 				"modifiers": {
@@ -122,6 +123,29 @@
 				"key_code": "keypad_9"
 			}],
 			"type": "basic"
-		}]
-	}]
+			}]
+		},
+		{
+			"description": "英数キー単打で英数入力、他のキーと組み合わせでfnキー",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "japanese_eisuu",
+						"modifiers": { "optional": [ "any" ] }
+					},
+					"to": [
+						{
+							"key_code": "fn",
+							"lazy": true
+						}
+					],
+					"to_if_alone": [
+						{ "key_code": "japanese_eisuu" }
+					]
+				}
+			]
+		}	
+
+	]
 }
