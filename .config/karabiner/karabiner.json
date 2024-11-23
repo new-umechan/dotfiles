@@ -5,7 +5,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Fn+Key to KeyPad",
+                        "description": "Fn+Number to KeyPad",
                         "manipulators": [
                             {
                                 "from": {
@@ -115,6 +115,45 @@
                                     }
                                 },
                                 "to": [{ "key_code": "keypad_9" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl+[を押したときに、escキーと英数キーを送信する",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "keyboard_types": ["ansi", "iso"],
+                                        "type": "keyboard_type_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    { "key_code": "escape" },
+                                    { "key_code": "japanese_eisuu" }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "keyboard_types": ["jis"],
+                                        "type": "keyboard_type_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    { "key_code": "escape" },
+                                    { "key_code": "japanese_eisuu" }
+                                ],
                                 "type": "basic"
                             }
                         ]
