@@ -13,6 +13,20 @@
 					]
 				}
 			]
+		},
+		{
+			"description": "Ctrl-H を 完全にBackSpace に変換",
+			"manipulators": [
+				{ "type": "basic",
+					"from": { "key_code": "h",
+						"modifiers": { "mandatory": [ "control" ] }
+					},
+					"to": [
+						{ "key_code": "delete_or_backspace" }
+					]
+				}
+			]
 		}
+
 	]
 }

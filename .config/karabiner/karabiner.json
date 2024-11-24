@@ -5,6 +5,19 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ctrl-H を 完全にBackSpace に変換",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [{ "key_code": "delete_or_backspace" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl-M を Enter に変換",
                         "manipulators": [
                             {
