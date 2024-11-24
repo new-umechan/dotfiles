@@ -113,16 +113,10 @@ zinit light zsh-users/zsh-history-substring-search
 # fzfでディレクトリをファジー検索して移動
 
 # fzfファジー検索
-EXCLUDE_PATHS="-path './.config/*' -o -path './.config' -a ! -path '*/library/*'"
 
 fcd() {
 	local dir
-	dir=$(find . -type d \( ! -path '*/.*' ${EXCLUDE_PATHS} \) | fzf) && cd "$dir"
-}
-
-fnv() {
-	local dir
-	dir=$(find . -type d \( ! -path '*/.*' ${EXCLUDE_PATHS} \) | fzf) && nvim "$dir"
+	dir=$(find . -type d | fzf) && cd "$dir"
 }
 
 alias nv='nvim'
