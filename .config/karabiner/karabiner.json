@@ -5,6 +5,19 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ctrl-M を Enter に変換",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Fn+Number to KeyPad",
                         "manipulators": [
                             {
@@ -220,6 +233,14 @@
                 {
                     "from": { "key_code": "caps_lock" },
                     "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                },
+                {
+                    "from": { "key_code": "delete_or_backspace" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "return_or_enter" },
+                    "to": [{ "key_code": "vk_none" }]
                 }
             ],
             "virtual_hid_keyboard": {
