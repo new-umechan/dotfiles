@@ -5,6 +5,19 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ctrl-M を Enter に変換",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl-H を 完全にBackSpace に変換",
                         "manipulators": [
                             {
@@ -18,14 +31,14 @@
                         ]
                     },
                     {
-                        "description": "Ctrl-M を Enter に変換",
+                        "description": "Ctrl-[ を 完全にEscに変換",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "open_bracket",
                                     "modifiers": { "mandatory": ["control"] }
                                 },
-                                "to": [{ "key_code": "return_or_enter" }],
+                                "to": [{ "key_code": "delete_or_backspace" }],
                                 "type": "basic"
                             }
                         ]
@@ -165,7 +178,7 @@
                         ]
                     },
                     {
-                        "description": "Ctrl+[を押したときに、escキーと英数キーを送信する",
+                        "description": "Ctrl+[を押したときに、英数キーも送信する（vim用） (rev 2)",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -179,7 +192,10 @@
                                     "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
-                                    { "key_code": "escape" },
+                                    {
+                                        "key_code": "open_bracket",
+                                        "modifiers": ["control"]
+                                    },
                                     { "key_code": "japanese_eisuu" }
                                 ],
                                 "type": "basic"
@@ -196,7 +212,10 @@
                                     "modifiers": { "mandatory": ["control"] }
                                 },
                                 "to": [
-                                    { "key_code": "escape" },
+                                    {
+                                        "key_code": "close_bracket",
+                                        "modifiers": ["control"]
+                                    },
                                     { "key_code": "japanese_eisuu" }
                                 ],
                                 "type": "basic"
@@ -249,6 +268,10 @@
                 },
                 {
                     "from": { "key_code": "delete_or_backspace" },
+                    "to": [{ "key_code": "vk_none" }]
+                },
+                {
+                    "from": { "key_code": "escape" },
                     "to": [{ "key_code": "vk_none" }]
                 },
                 {
