@@ -20,7 +20,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -31,7 +31,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "comma",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -42,7 +42,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "period",
+                                    "key_code": "l",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -53,7 +53,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "u",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -64,7 +64,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -75,7 +75,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "l",
+                                    "key_code": "o",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -86,7 +86,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "7",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -97,7 +97,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "8",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
@@ -108,7 +108,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "9",
                                     "modifiers": {
                                         "mandatory": ["fn"],
                                         "optional": ["any"]
