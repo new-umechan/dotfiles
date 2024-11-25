@@ -154,6 +154,8 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-history-substring-search
 
+. `brew --prefix`/etc/profile.d/z.sh
+
 # color
 
 # 下線を削除するために、zsh-syntax-highlightingのスタイルを設定
@@ -169,3 +171,4 @@ bindkey '^[[A' history-substring-search-up    # 上矢印キーで履歴を上�
 bindkey '^[[B' history-substring-search-down  # 下矢印キーで履歴を下に移動
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
+
