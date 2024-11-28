@@ -2,6 +2,7 @@
     "profiles": [
         {
             "name": "大西配列",
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "a" },
@@ -111,11 +112,7 @@
         },
         {
             "name": "QWERTY",
-            "selected": true,
-            "virtual_hid_keyboard": {
-                "country_code": 0,
-                "keyboard_type_v2": "jis"
-            }
+            "virtual_hid_keyboard": { "country_code": 0 }
         }
     ]
 }

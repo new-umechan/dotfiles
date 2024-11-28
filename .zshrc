@@ -172,3 +172,9 @@ bindkey '^[[B' history-substring-search-down  # 下矢印キーで履歴を下�
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+eval "$(pyenv init --path)"
+export PATH="$HOME/.gem/ruby/3.2.6/bin:$PATH"
+export PATH="/Users/umehararyu/.rbenv/versions/3.2.6/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"

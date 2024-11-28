@@ -11,4 +11,7 @@ require("mason-lspconfig").setup_handlers {
     ["jdtls"] = function()
         require('lspconfig').jdtls.setup{}
     end,
+	["ruby_ls"] = function()
+        require('lspconfig').ruby_ls.setup{}
+    end,
 }

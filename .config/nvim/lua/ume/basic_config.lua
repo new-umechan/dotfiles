@@ -55,3 +55,7 @@ vim.cmd([[
 ]])
 
 opt.termguicolors = true
+
+-- undoが保存される
+vim.o.undofile = true
+vim.o.undodir = vim.fn.expand('~/.nvim_undo_log')

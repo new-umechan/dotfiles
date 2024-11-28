@@ -1,12 +1,12 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = { "c", "html", "javascript", "typescript", "lua", "css" }, -- 必要な言語を追加
+	ensure_installed = { "c", "html", "javascript", "typescript", "lua", "css", "ruby" }, -- 必要な言語を追加
 	highlight = {
-		enable = true, -- シンタックスハイライトを有効化
+		enable = true,
 	},
 	indent = {
-		enable = true -- スマートインデントを有効化
+		enable = true,
 	},
 	autotag = {
-		enable = true, -- autotag機能を有効化
+		enable = true,
 	}
 }

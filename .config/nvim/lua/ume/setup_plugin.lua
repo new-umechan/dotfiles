@@ -31,7 +31,13 @@ require("lazy").setup({
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		event = "BufReadPre"
+		event = "BufReadPre",
+		config = function()
+        require("mason-lspconfig").setup({
+            -- ここにインストールしたいLSPサーバーを指定
+            ensure_installed = { "tsserver", "clangd", "jdtls", "solargraph", "lua_ls" },
+        })
+    end,
 	},
 
 	-- LSPサーバーの設定
@@ -48,7 +54,7 @@ require("lazy").setup({
 						)
 					}
 					require('lspconfig')[server].setup(opt)
-				end
+				end,
 			})
 		end
 	},
@@ -227,3 +233,4 @@ require("lazy").setup({
 	debug = false, -- デバッグ情報 いちいちうるさいので、テスト中のみの適用をおすすめ
 	profiler = true, -- プロファイラーを有効化
 })
+

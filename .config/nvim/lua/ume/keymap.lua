@@ -11,6 +11,17 @@ vim.keymap.set({ 'n', 'v' }, '<space>', '<nop>', { silent = true })
 -- 上の埋め合わせ
 -- vim.keymap.set('n', '<C-J>', 'J', { noremap = true, silent = true })
 
+vim.keymap.set({'n', 'v'}, 'k', 'h', { silent = true })
+vim.keymap.set({'n', 'v'}, 't', 'j', { silent = true })
+vim.keymap.set({'n', 'v'}, 'n', 'k', { silent = true })
+vim.keymap.set({'n', 'v'}, 's', 'l', { silent = true })
+
+-- 潰したキーの補完
+vim.keymap.set({'n', 'v'}, 'k', 'n', { silent = true })
+vim.keymap.set({'n', 'v'}, 'K', 'N', { silent = true })
+vim.keymap.set({'n', 'v'}, 'l', 't', { silent = true })
+vim.keymap.set({'n', 'v'}, 'L', 'T', { silent = true })
+
 -- Emacs風のキーバインド
 vim.keymap.set({ 'i', 'c' }, '<C-p>', '<Up>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-b>', '<Left>', { noremap = true, silent = true })
@@ -40,7 +51,7 @@ vim.keymap.set('i', 'jj', '<esc>', { silent = true }) -- インサートモー�
 vim.api.nvim_set_keymap('n', '<leader>c', ':nohlsearch<CR>', { noremap = true, silent = true })
 
 -- 画面遷移
-vim.keymap.set({ 'n', 'v' }, '<leader>f', '<c-w>w')
+vim.keymap.set({ 'n', 'v' }, '<leader>o', '<c-w>w')
 
 -- 相対行表示をon/off
 -- lazyのon offのキーとかぶっちゃったのでやめた

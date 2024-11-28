@@ -70,6 +70,7 @@ mv my-setting-of-neovim nvim
     - [ ] IMEをnormalモード時にオフにする
 - [ ] %強化 treesitter 
 - [ ] setup_plugins.luaを、importの書き方に統一
+- [ ] 大西配列適用
 
 ### やめた
 - [ ] 変数への定義ジャンプをつくる →　個人的につかわないな
