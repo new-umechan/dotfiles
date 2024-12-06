@@ -73,7 +73,7 @@ require("lazy").setup({
 		run = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter.configs").setup {
-				ensure_installed = { "markdown", "markdown_inline", "html", "javascript", "typescript", "c" },
+				ensure_installed = { "markdown", "markdown_inline", "html", "javascript", "typescript", "c", "ruby" },
 				highlight = { enable = true },
 				indent = { enable = true },
 			}
@@ -85,10 +85,10 @@ require("lazy").setup({
 	-- ts用のautotag
 	{
 		"windwp/nvim-ts-autotag",
-		ft = { "html", "xml", "javascriptreact", "typescriptreact" }, -- 必要なファイルタイプだけ
+		event = "InsertEnter",
 		config = function()
 			require("nvim-ts-autotag").setup({
-				filetypes = { "html", "javascript", "typescript", "xml", "vue", "svelte" }
+				filetypes = { "html", "javascript", "typescript", "typescriptreact",  "xml", "vue", "svelte", "eruby" }
 			})
 		end,
 	},

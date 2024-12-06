@@ -12,3 +12,9 @@ vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#6A708B", bg = "NONE" })
 -- windowセパレータを空白に設定したよ（一バイト文字しか読み込めない）
 vim.opt.fillchars = { vert = ' ' }
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = "path/to/erb/folder/*.erb", -- 適切なフォルダパスを指定
+    callback = function()
+        vim.bo.filetype = "html"
+    end,
+})

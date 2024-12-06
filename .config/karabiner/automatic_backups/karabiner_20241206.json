@@ -5,22 +5,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change ; to ー in Japanese input mode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "language": "ja" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": { "key_code": "semicolon" },
-                                "to": [{ "key_code": "hyphen" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "ctrl-h を 完全にbackspace に変換",
                         "manipulators": [
                             {

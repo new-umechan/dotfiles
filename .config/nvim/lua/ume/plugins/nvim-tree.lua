@@ -44,12 +44,13 @@ return {
 
 				api.config.mappings.default_on_attach(bufnr)
 
-				vim.keymap.set('n', 'c', api.fs.create, opts('Create'))
+				vim.keymap.set('n', 't', api.fs.create, opts('Create'))
+				vim.keymap.set('n', 'n', api.fs.create, opts('Create'))
 				vim.keymap.set('n', 'y', api.fs.copy.node, opts('Yank'))
+				vim.keymap.set('n', 'p', api.fs.paste, opts('Paste Node'))
 				vim.keymap.set('n', 'd', api.fs.trash, opts('Trash'))
+				vim.keymap.set('n', 'f', api.node.open.edit, opts('Open Node'))
 				vim.keymap.set('n', 'v', api.node.open.vertical, opts('Open in Vertical Split'))  -- 垂直分割
-				vim.keymap.set({'n', 'v'}, 's', 'l', { silent = true })
-				vim.keymap.del('n', 's', { buffer = bufnr })
 
 			end,
 			hijack_netrw = true, -- netrwを乗っ取って、nvim-treeを使う
