@@ -50,6 +50,19 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- font
+	font = wezterm.font("JetBrains Mono", {ligatures=false}),
+	harfbuzz_features = {"calt=0", "clig=0", "liga=0"}, -- リガチャをオフ
+	-- フォールバックとして日本語フォントを設定
+	font_rules = {
+		{
+			italic = false,
+			intensity = "Normal",
+			font = wezterm.font_with_fallback({
+				"JetBrains Mono",               -- 英語用フォント
+				"Hiragino Kaku Gothic ProN",    -- 日本語用フォント
+			}),
+		},
+	},
 	font_size = 13,
 
 	-- Icebergのカラースキーム

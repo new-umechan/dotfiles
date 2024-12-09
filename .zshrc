@@ -124,6 +124,15 @@ alias cl='clear'
 # alias dt="LC_TIME=ja_JP.UTF-8 date '+%Y/%m/%d %a %y%m%d'"
 alias dt="echo '\033[1;34m'$(date '+%Y/%m/%d')'\033[0m'"
 
+function mdcd() {
+    mkdir -p "$1" && cd "$1"
+}
+
+function tonv() {
+    local file="$1"
+    mkdir -p "$(dirname "$file")" && touch "$file" && nvim "$file"
+}
+
 # --------------------------------------------
 
 # ~/.zshrcの中で.zprofileを読み込む

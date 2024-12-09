@@ -29,7 +29,7 @@ macOS m1
 Enjoy!
 
 ### TODO
-- [ ] zsh plugin
+- [ ] zsh pluginzsh-abbrは悪くなかったけど、コマンドを打っちゃうのでなし
 
 
 ### キー配列について(japanese)
