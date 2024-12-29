@@ -29,13 +29,14 @@ require("lazy").setup({
 		"williamboman/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonUpdate" }, -- コマンド実行時に読み込む
 	},
+
 	{
 		"williamboman/mason-lspconfig.nvim",
 		event = "BufReadPre",
 		config = function()
         require("mason-lspconfig").setup({
             -- ここにインストールしたいLSPサーバーを指定
-            ensure_installed = { "tsserver", "clangd", "jdtls", "solargraph", "lua_ls" },
+            ensure_installed = { "tsserver", "clangd", "jdtls", "solargraph", "lua_ls", "pyright", },
         })
     end,
 	},

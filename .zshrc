@@ -93,7 +93,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 #=============================
 # zsh-autosuggestions（遅延ロード + キーバインド設定）
 #=============================
-zinit ice wait"1" atload"bindkey '^E' autosuggest-accept"
+zinit ice wait"1"
 zinit light zsh-users/zsh-autosuggestions
 
 #=============================
@@ -187,3 +187,4 @@ eval "$(pyenv init --path)"
 export PATH="$HOME/.gem/ruby/3.2.6/bin:$PATH"
 export PATH="/Users/umehararyu/.rbenv/versions/3.2.6/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"
+export DYLD_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_LIBRARY_PATH
