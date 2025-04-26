@@ -66,7 +66,7 @@ return {
 	keys = {
 		{
 			key = 'R',
-			mods = 'CTRL|SHIFT',
+			mods = 'CMD',
 			action = act.PromptInputLine {
 				description = 'Tab名を書いてね^^',
 				action = wezterm.action_callback(function(window, pane, line)

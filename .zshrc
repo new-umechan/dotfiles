@@ -188,3 +188,12 @@ export PATH="$HOME/.gem/ruby/3.2.6/bin:$PATH"
 export PATH="/Users/umehararyu/.rbenv/versions/3.2.6/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"
 export DYLD_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_LIBRARY_PATH
+export COHERE_API_KEY=sa6UM1hXNquEeH3fntaGGgrYEjGVUXbmCTTRdJdf
+export LINE_CHANNEL_SECRET="2a2f079801fd207fd1295e11f090c4c4"
+export MSG_CHANNEL_ACCESS_TOKEN="xh3hao4glxchg8DVAPZzoJgHLYUbMfdIO8bj/tb5Tq/D92bzzdxPa44UCGNoHSFHHdUT3u10Y0BoBzZdVNaNw5EKu3ajGSzOObkYu7qmNX+btnDS9QoaqbB1finH3CDfJZjsrCdfuBdACjwx1NM/nwdB04t89/1O/w1cDnyilFU="
+
+# Created by `pipx` on 2025-01-17 09:52:54
+export PATH="$PATH:/Users/umehararyu/.local/bin"
+
+# g++　c++競プロ用
+export "PATH=/usr/local/bin:$PATH"

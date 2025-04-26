@@ -59,3 +59,13 @@ opt.termguicolors = true
 -- undoが保存される
 vim.o.undofile = true
 vim.o.undodir = vim.fn.expand('~/.nvim_undo_log')
+
+-- 自動コメントをやめる
+-- https://golang.hateblo.jp/entry/2023/04/20/200612より
+vim.api.nvim_create_autocmd('BufEnter', {
+  group = vim.api.nvim_create_augroup('turn_off_auto_commenting', {}),
+  pattern = '*',
+  callback = function()
+    vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
+  end,
+})

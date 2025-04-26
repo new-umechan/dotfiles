@@ -35,10 +35,10 @@ require("lazy").setup({
 		event = "BufReadPre",
 		config = function()
         require("mason-lspconfig").setup({
-            -- ここにインストールしたいLSPサーバーを指定
-            ensure_installed = { "tsserver", "clangd", "jdtls", "solargraph", "lua_ls", "pyright", },
+            -- mason を使って入れるLSPサーバー
+            ensure_installed = { "tsserver", "clangd", "jdtls", "solargraph", "lua_ls", "pyright", "sourcekit"},
         })
-    end,
+		end,
 	},
 
 	-- LSPサーバーの設定
@@ -74,14 +74,14 @@ require("lazy").setup({
 		run = ":TSUpdate",
 		config = function()
 			require("nvim-treesitter.configs").setup {
-				ensure_installed = { "markdown", "markdown_inline", "html", "javascript", "typescript", "c", "ruby" },
+				ensure_installed = { "markdown", "markdown_inline", "html", "javascript", "typescript", "c", "ruby", "swift" },
 				highlight = { enable = true },
 				indent = { enable = true },
 			}
 		end,
 	},
 
-	{ import = "ume.plugins.treesj"},	-- 行の結合
+	{ import = "ume.plugins.treesj" },	-- 行の結合
 
 	-- ts用のautotag
 	{
@@ -216,7 +216,6 @@ require("lazy").setup({
 		notifications = {
 			enabled = false,
 		},
-
 	},
 	-- 起動速度を早くするための確認用
 	-- :Lazy profileでわかる

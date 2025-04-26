@@ -24,7 +24,12 @@ vim.keymap.set({ 'i', 'c' }, '<C-e>', '<End>', { noremap = true, silent = true }
 vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true, silent = true })
 
 -- 右のfiletreeの表示/非表示
-vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<cr>', { silent = true })
+if vim.g.vscode then
+	-- nvim plugin
+	vim.keymap.set("n", "<leader>o", "<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>")
+else
+	vim.api.nvim_set_keymap('n', '<leader>e', ':NvimTreeToggle<cr>', { silent = true })
+end
 
 -- コピペの簡略化
 vim.api.nvim_set_keymap('n', '<leader>a', 'ggVG', { noremap = true, silent = true })
