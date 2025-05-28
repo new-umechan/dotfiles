@@ -54,6 +54,25 @@ require("lazy").setup({
 							vim.lsp.protocol.make_client_capabilities()
 						)
 					}
+
+					-- lua_ls のときだけ特別な設定を追加
+					if server == "lua_ls" then
+						opt.settings = {
+							Lua = {
+								diagnostics = {
+									globals = { "vim" }, -- ← これで Undefined global 'vim' を防ぐ
+								},
+								workspace = {
+									library = vim.api.nvim_get_runtime_file("", true),
+									checkThirdParty = false,
+								},
+								telemetry = {
+									enable = false, -- 開発者に情報を送らない
+								},
+							},
+						}
+					end
+
 					require('lspconfig')[server].setup(opt)
 				end,
 			})

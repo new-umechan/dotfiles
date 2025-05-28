@@ -65,7 +65,7 @@ return {
 	-- キー設定
 	keys = {
 		{
-			key = 'R',
+			key = 'r',
 			mods = 'CMD',
 			action = act.PromptInputLine {
 				description = 'Tab名を書いてね^^',

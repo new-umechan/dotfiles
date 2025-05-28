@@ -11,14 +11,17 @@ vim.keymap.set({ 'n', 'v' }, '<space>', '<nop>', { silent = true })
 -- 上の埋め合わせ
 -- vim.keymap.set('n', '<C-J>', 'J', { noremap = true, silent = true })
 
--- Emacs風のキーバインド
+-- insert mode, command mode時にEmacs風キーバインド
 vim.keymap.set({ 'i', 'c' }, '<C-p>', '<Up>', { noremap = true, silent = true })
+vim.keymap.set({ 'i', 'c' }, '<C-n>', '<Down>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-b>', '<Left>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-f>', '<Right>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-h>', '<BS>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-d>', '<Del>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-a>', '<Home>', { noremap = true, silent = true })
 vim.keymap.set({ 'i', 'c' }, '<C-e>', '<End>', { noremap = true, silent = true })
+
+vim.keymap.set('i', '<C-k>', '<C-o>D', { noremap = true, silent = true })
 
 -- Uキーでredo （もとはその行の編集を止めてた）
 vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true, silent = true })

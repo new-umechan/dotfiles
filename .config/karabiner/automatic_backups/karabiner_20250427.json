@@ -6,6 +6,7 @@
                 "rules": [
                     {
                         "description": "Figma: Option+→/← を Option+. / Option+, に置き換え",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [

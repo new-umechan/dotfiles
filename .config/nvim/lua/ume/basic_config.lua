@@ -69,3 +69,6 @@ vim.api.nvim_create_autocmd('BufEnter', {
     vim.opt.formatoptions:remove({ 'c', 'r', 'o' })
   end,
 })
+
+-- 定義ジャンプを垂直分割で
+vim.keymap.set('n', '<C-]>', ':vertical tag <C-r><C-w><CR>', { noremap = true, silent = true })
