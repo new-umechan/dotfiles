@@ -45,7 +45,7 @@ mv my-setting-of-neovim nvim
   ただし補完プラグインは入れる。そっちの方が効率がいいから。
 - git操作など、vim内で完結させる系はがんがん入れていきたい。
 - 速さは重要! できれば遅延読み込みを駆使して50msぐらいいきたいな。
-  https://qiita.com/delphinus/items/fb905e452b2de72f1a0f#4-%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF
+  https://qiita.com/delphinus/items/fb905e452b2de72f1a0f#4-%E3%settig83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%AE%E9%81%85%E5%BB%B6%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF
 
 ### ToDo
 - [x] git操作やりやすく
@@ -63,14 +63,12 @@ mv my-setting-of-neovim nvim
     - [x] 80ms
     - [ ] 50ms
 - [x] termianlを開けるようにする（<space>tとかかな）
-    - [x] あとはVScodeっぽく下におけるようにしておきたい。
 - [ ] 日本語に対応させる
     - [x] insert modeでemacsの基本操作ができるようにする
+	- [x] IMEをnormalモード時にオフにする
     - [ ] 検索を、ローマ字でできるようにする
-    - [ ] IMEをnormalモード時にオフにする
 - [ ] %強化 treesitter 
 - [ ] setup_plugins.luaを、importの書き方に統一
-- [ ] 大西配列適用
 
 ### やめた
 - [ ] 変数への定義ジャンプをつくる →　個人的につかわないな

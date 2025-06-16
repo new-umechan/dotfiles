@@ -1,5 +1,8 @@
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 
+# ロード時間をzprofで
+zmodload zsh/zprof
+
 PROMPT='%~ > '
 RPROMPT=''
 
@@ -57,34 +60,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 	########################################
 
 #=============================
-# # source zsh-syntax-highlighting
-# #=============================
-# if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-# 	source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# fi
-#
-# #=============================
-# # source zsh-autosuggestions
-# #=============================
-# if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-# 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-# fi
-#
-# #=============================
-# # source zsh-completions
-# #=============================
-# if [ -f ~/.zsh/zsh-completions/zsh-completions.zsh ]; then
-# 	source ~/.zsh/zsh-completions/zsh-completions.zsh
-# fi
-#
-# #=============================
-# # source zsh-history-substring-search
-# #=============================
-# if [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ]; then
-# 	source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
-# fi
-
-#=============================
 # zsh-syntax-highlighting（遅延ロード）
 #=============================
 zinit ice wait"2"
@@ -102,27 +77,10 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice wait"0"
 zinit light zsh-users/zsh-completions
 
-#=============================
-# zsh-history-substring-search（特定キーでロード）
-#=============================
-zinit ice atload"bindkey '^R' history-substring-search-up; bindkey '^S' history-substring-search-down"
-zinit light zsh-users/zsh-history-substring-search
-
 # ------ キーバインド -----------------------
-
-# fzfでディレクトリをファジー検索して移動
-
-# fzfファジー検索
-
-fcd() {
-	local dir
-	dir=$(find . -type d | fzf) && cd "$dir"
-}
 
 alias nv='nvim'
 alias cl='clear'
-# alias dt="LC_TIME=ja_JP.UTF-8 date '+%Y/%m/%d %a %y%m%d'"
-alias dt="echo '\033[1;34m'$(date '+%Y/%m/%d')'\033[0m'"
 
 function mdcd() {
     mkdir -p "$1" && cd "$1"
@@ -174,12 +132,6 @@ ZSH_HIGHLIGHT_STYLES[path]='none'
 for style in command builtin reserved-word alias function; do
 	ZSH_HIGHLIGHT_STYLES[$style]='fg=#B2BD79'
 done
-
-# 全ての設定が終わってから
-bindkey '^[[A' history-substring-search-up    # 上矢印キーで履歴を上に移動
-bindkey '^[[B' history-substring-search-down  # 下矢印キーで履歴を下に移動
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"

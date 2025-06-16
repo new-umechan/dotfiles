@@ -84,7 +84,7 @@ return {
 			action = act.SendString("\\"),
 		},
 		{
-			key = 'e', -- 小文字に修正
+			key = 'e',
 			mods = 'CTRL',
 			action = wezterm.action.DisableDefaultAssignment,
 		},

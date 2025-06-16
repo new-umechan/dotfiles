@@ -18,6 +18,7 @@ install_tools() {
   brew install trash
   brew install zsh
   brew install z
+  brew install zinit
 
   echo "Tools installation completed!"
 }
