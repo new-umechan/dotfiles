@@ -92,12 +92,22 @@ return {
 			mods = "OPT",
 			action = act.SendString("\\"),
 		},
-		{
-			key = "e",
-			mods = "CTRL",
-			action = wezterm.action.DisableDefaultAssignment,
-		},
-	},
+        {
+            key = "e",
+            mods = "CTRL",
+            action = wezterm.action.DisableDefaultAssignment,
+        },
+        {
+            key = "LeftArrow",
+            mods = "CMD|SHIFT",
+            action = act.MoveTabRelative(-1),
+        },
+        {
+            key = "RightArrow",
+            mods = "CMD|SHIFT",
+            action = act.MoveTabRelative(1),
+        },
+    },
 	colors = {
 		cursor_bg = "#72c9d1",
 		cursor_fg = "#ffffff",
