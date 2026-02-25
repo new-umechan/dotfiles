@@ -13,6 +13,11 @@ return {
 			local augend = require("dial.augend")
 			require("dial.config").augends:register_group({
 				default = {
+					augend.constant.new({
+						elements = {"[ ]", "[x]"},
+						word = false,
+						cyclic = true,
+					}),
 					augend.integer.alias.decimal,
 					augend.integer.alias.hex,
 					augend.constant.alias.bool,
