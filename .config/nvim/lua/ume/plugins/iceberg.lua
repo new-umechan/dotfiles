@@ -1,3 +1,10 @@
 return {
-	{ "iceberg.vim", lazy = true, event = "VeryLazy" },
+	{
+		"cocopon/iceberg.vim",
+		lazy = false,
+		priority = 1000,
+		init = function()
+			vim.cmd("colorscheme iceberg")
+		end,
+	},
 }

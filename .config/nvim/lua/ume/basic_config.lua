@@ -28,7 +28,7 @@ opt.expandtab = false
 vim.o.number = true
 vim.o.relativenumber = true
 -- 幅を設定
-vim.o.numberwidth = 4
+vim.o.numberwidth = 3
 
 -- コピペを簡単に
 opt.clipboard:append({"unnamedplus"})
@@ -72,3 +72,13 @@ vim.api.nvim_create_autocmd('BufEnter', {
 
 -- 定義ジャンプを垂直分割で
 vim.keymap.set('n', '<C-]>', ':vertical tag <C-r><C-w><CR>', { noremap = true, silent = true })
+
+vim.opt.guicursor = table.concat({
+  "n-v-c:block",
+  "ve:ver35",
+  "o:hor50",
+  "i-ci:ver25",
+  "r-cr:hor20",
+  "sm:block",
+  "a:blinkon0",
+}, ",")

@@ -1,3 +1,4 @@
+--lua/overseer/template/c_runner.lua
 return {
 	name = "gcc build and run in terminal",
 	builder = function()

@@ -81,6 +81,3 @@ mv my-setting-of-neovim nvim
 - [ ] no neck pain使用
 	  → 画面遷移がめんどい
 	  隙間が気になる
-
-### あきらめた pullリクエスト大歓迎
-- [ ] markdownを編集しやすくする

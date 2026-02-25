@@ -5,70 +5,24 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Figma: Option+→/← を Option+. / Option+, に置き換え",
+                        "description": "Minecraft/Lunar Client が前面のときだけ 英数→左クリック",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.figma\\.Desktop$"
+                                            "^com\\.mojang\\.minecraftlauncher$",
+                                            "^com\\.moonsworth\\.lunarclient$",
+                                            "^com\\.azul\\..*$",
+                                            "^org\\.openjdk\\..*$",
+                                            "^net\\.java\\..*$"
                                         ],
+                                        "file_paths": ["^/Users/[^/]+/Library/Application Support/minecraft/runtime/.*/bin/java$", "^/Users/[^/]+/Library/Application Support/minecraft/.*/bin/java$", "^/Users/[^/]+/\\.lunarclient/jre/.*/bin/java$"],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "period",
-                                        "modifiers": ["option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.figma\\.Desktop$"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": ["option"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "comma",
-                                        "modifiers": ["option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change ; to ー in Japanese input mode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "language": "ja" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": { "key_code": "semicolon" },
-                                "to": [{ "key_code": "hyphen" }],
+                                "from": { "key_code": "japanese_eisuu" },
+                                "to": [{ "pointing_button": "button1" }],
                                 "type": "basic"
                             }
                         ]
@@ -205,7 +159,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "key_code": "escape" }],
+                                "to": [{ "pointing_button": "button1" }],
                                 "type": "basic"
                             }
                         ]
@@ -225,6 +179,75 @@
                                     }
                                 ],
                                 "to_if_alone": [{ "key_code": "japanese_eisuu" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Figma: Option+→/← を Option+. / Option+, に置き換え",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.figma\\.Desktop$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["option"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "period",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.figma\\.Desktop$"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "mandatory": ["option"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "comma",
+                                        "modifiers": ["option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change ; to ー in Japanese input mode",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": { "key_code": "semicolon" },
+                                "to": [{ "key_code": "hyphen" }],
                                 "type": "basic"
                             }
                         ]
@@ -331,6 +354,18 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 21,
+                        "vendor_id": 1278
+                    },
+                    "ignore": false
+                }
+            ],
             "fn_function_keys": [
                 {
                     "from": { "key_code": "f3" },
@@ -362,7 +397,7 @@
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
-                    "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+                    "to": [{ "pointing_button": "button5" }]
                 }
             ],
             "virtual_hid_keyboard": {

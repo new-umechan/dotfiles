@@ -31,6 +31,10 @@ return {
 				},
 			},
 
+			git = {
+				ignore = false,
+			},
+
 			actions = {
 				open_file = {
 					resize_window = true, -- ファイルを開くときにウィンドウを自動リサイズ

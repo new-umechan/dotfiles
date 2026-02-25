@@ -1,0 +1,30 @@
+{
+  "title": "Minecraft / LunarClient: 英数キー→左クリック",
+  "rules": [
+    {
+      "description": "Minecraft/Lunar Client が前面のときだけ 英数→左クリック",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "japanese_eisuu" },
+          "to": [ { "pointing_button": "button1" } ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.moonsworth\\.lunarclient$",
+                "^com\\.azul\\..*$",
+                "^org\\.openjdk\\..*$",
+                "^net\\.java\\..*$"
+              ],
+              "file_paths": [
+                "^/Users/[^/]+/Library/Application Support/minecraft/runtime/.*/bin/java$",
+                "^/Users/[^/]+/\\.lunarclient/jre/.*/bin/java$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

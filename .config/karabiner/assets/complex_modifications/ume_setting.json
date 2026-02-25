@@ -111,6 +111,7 @@
 				{
 					"from": {
 						"key_code": "7",
+						
 						"modifiers": {
 							"mandatory": ["fn"],
 							"optional": ["any"]
@@ -156,7 +157,9 @@
 						}
 					},
 					"to": [
-						{ "key_code": "escape" }
+						{
+							"pointing_button": "button1"
+						}
 					],
 					"type": "basic"
 				}

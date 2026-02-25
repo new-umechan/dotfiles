@@ -54,3 +54,5 @@ vim.keymap.set({ 'n', 'v' }, '<leader>f', '<c-w>w')
 -- lazyのon offのキーとかぶっちゃったのでやめた
 -- vim.api.nvim_set_keymap('n', '<leader>l', ":set relativenumber!<cr>", {})
 
+-- 相対パスのコピー
+vim.keymap.set('n', '<leader>y', ":let @+ = expand('%:.')<CR>")

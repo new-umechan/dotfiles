@@ -21,6 +21,16 @@ alias ls='ls --color=auto'
 # vimよりも、１行とかのコードだと便利
 bindkey -e
 
+bindkey '^p' history-beginning-search-backward
+bindkey '^n' history-beginning-search-forward
+bindkey '^u' push-line
+
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^o' edit-command-line
+
+export EDITOR=nvim
+
 # ディレクトリ名だけでcdする
 # setopt auto_cd
 
@@ -35,7 +45,7 @@ setopt pushd_ignore_dups
 
 
 # 同時に起動したzshの間でヒストリを共有する
-setopt share_history
+# setopt share_history
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -80,15 +90,47 @@ zinit light zsh-users/zsh-completions
 # ------ キーバインド -----------------------
 
 alias nv='nvim'
-alias cl='clear'
 
-function mdcd() {
+alias shogun="~/prog/tools/multi-agent-shogun/shutsujin_departure.sh -c"
+
+
+function mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
-function tonv() {
-    local file="$1"
-    mkdir -p "$(dirname "$file")" && touch "$file" && nvim "$file"
+uvcd() {
+	if [ -z "$1" ]; then
+		echo "使い方: uvcd <project_name>"
+		return 1
+	fi
+
+	local project="$1"
+
+	# すでに存在してたらエラー出す
+	if [ -e "$project" ]; then
+		echo "⚠️ ディレクトリ '$project' はすでに存在します。"
+		return 1
+	fi
+
+	# ディレクトリ作成して移動
+	mkdir -p "$project"
+	cd "$project" || return 1
+
+	uv init
+
+	# pyrightconfig.json 追加
+	cat <<EOF > pyrightconfig.json
+{
+  "venvPath": ".",
+  "venv": ".venv"
+}
+EOF
+}
+
+
+p5init() {
+  cp -- "$HOME/.config/p5_temp"/{index.html,sketch.js,package.json} . \
+    && npm i -D vite
 }
 
 # --------------------------------------------
@@ -140,12 +182,22 @@ export PATH="$HOME/.gem/ruby/3.2.6/bin:$PATH"
 export PATH="/Users/umehararyu/.rbenv/versions/3.2.6/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"
 export DYLD_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_LIBRARY_PATH
-export COHERE_API_KEY=sa6UM1hXNquEeH3fntaGGgrYEjGVUXbmCTTRdJdf
-export LINE_CHANNEL_SECRET="2a2f079801fd207fd1295e11f090c4c4"
-export MSG_CHANNEL_ACCESS_TOKEN="xh3hao4glxchg8DVAPZzoJgHLYUbMfdIO8bj/tb5Tq/D92bzzdxPa44UCGNoHSFHHdUT3u10Y0BoBzZdVNaNw5EKu3ajGSzOObkYu7qmNX+btnDS9QoaqbB1finH3CDfJZjsrCdfuBdACjwx1NM/nwdB04t89/1O/w1cDnyilFU="
 
 # Created by `pipx` on 2025-01-17 09:52:54
 export PATH="$PATH:/Users/umehararyu/.local/bin"
 
+# npm用
+export PATH=$HOME/.local/bin:$PATH
+
 # g++　c++競プロ用
 export "PATH=/usr/local/bin:$PATH"
+
+# APIキーなどの秘密情報を読み込む
+# ファイルが存在する場合のみ読み込むことで、他の環境でのエラーを防ぐ
+if [ -f ~/.api_keys ]; then
+    source ~/.api_keys
+fi
+export PATH="$HOME/.nodebrew/current/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/umehararyu/.antigravity/antigravity/bin:$PATH"

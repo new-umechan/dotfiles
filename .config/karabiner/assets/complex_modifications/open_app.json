@@ -1,0 +1,61 @@
+{
+  "title": "Right Command to WezTerm",
+  "rules": [
+	{
+	  "description": "Open WezTerm with Right Command",
+	  "manipulators": [
+		{
+		  "type": "basic",
+		  "from": {
+			"key_code": "right_command",
+			"modifiers": {
+			  "optional": ["any"]
+			}
+		  },
+		  "to": [
+			{
+			  "shell_command": "open -a WezTerm"
+			}
+		  ],
+		  "conditions": [
+			{
+			  "type": "frontmost_application_unless",
+			  "bundle_identifiers": [
+				"^com\\.github\\.wez\\.wezterm$"
+			  ]
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+  "rules": [
+	{
+	  "description": "Open WezTerm with Right Command",
+	  "manipulators": [
+		{
+		  "type": "basic",
+		  "from": {
+			"key_code": "right_command",
+			"modifiers": {
+			  "optional": ["any"]
+			}
+		  },
+		  "to": [
+			{
+			  "shell_command": "open -a WezTerm"
+			}
+		  ],
+		  "conditions": [
+			{
+			  "type": "frontmost_application_unless",
+			  "bundle_identifiers": [
+				"^com\\.github\\.wez\\.wezterm$"
+			  ]
+			}
+		  ]
+		}
+	  ]
+	}
+  ]
+}
