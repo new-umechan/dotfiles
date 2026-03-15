@@ -18,7 +18,14 @@ local TAB_COLORS = {
 local custom_tab_titles = {}
 
 local function get_tab_title(tab)
-	return custom_tab_titles[tab.tab_id] or tab.active_pane.title
+	local title = custom_tab_titles[tab.tab_id] or tab.active_pane.title
+
+	-- codexの名前を短くする用
+	if title == "codex-aarch64-apple-darwin" then
+		return "codex"
+	end
+
+	return title
 end
 
 local function get_tab_color(tab)
