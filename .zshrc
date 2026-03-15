@@ -93,6 +93,8 @@ alias nv='nvim'
 
 alias shogun="~/prog/tools/multi-agent-shogun/shutsujin_departure.sh -c"
 
+alias tree="eza --tree --git-ignore"
+
 
 function mkcd() {
     mkdir -p "$1" && cd "$1"
