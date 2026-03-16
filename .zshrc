@@ -6,13 +6,7 @@ zmodload zsh/zprof
 PROMPT='%~ > '
 RPROMPT=''
 
-plugins=(git)
-
 # noramly setting
-
-# 色を使用出来るようにする
-autoload -Uz colors
-colors
 
 # lsをしたときに、色をつけるようにする
 alias ls='ls --color=auto'
@@ -56,7 +50,15 @@ SAVEHIST=1000000
 # 補完
 # 補完機能を有効にする
 autoload -Uz compinit
-compinit
+
+__lazy_compinit() {
+  compinit -C
+  bindkey '^I' expand-or-complete
+  zle expand-or-complete
+}
+
+zle -N __lazy_compinit
+bindkey '^I' __lazy_compinit
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -70,22 +72,19 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 	########################################
 
 #=============================
-# zsh-syntax-highlighting（遅延ロード）
+# プラグイン（遅延ロード）
 #=============================
-zinit ice wait"2"
-zinit light zsh-users/zsh-syntax-highlighting
 
-#=============================
-# zsh-autosuggestions（遅延ロード + キーバインド設定）
-#=============================
-zinit ice wait"1"
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
+zinit ice wait'1' lucid
 zinit light zsh-users/zsh-autosuggestions
 
-#=============================
-# zsh-completions（即時ロード）
-#=============================
-zinit ice wait"0"
-zinit light zsh-users/zsh-completions
+zinit ice wait'1' lucid
+zinit light zsh-users/zsh-history-substring-search
+
+zinit ice wait'1' lucid atload'_zsh_highlight_bind_widgets; _zsh_autosuggest_bind_widgets'
+zinit light zsh-users/zsh-syntax-highlighting
 
 # ------ キーバインド -----------------------
 
@@ -143,33 +142,16 @@ if [ -f ~/.zprofile ]; then
 	source ~/.zprofile
 fi
 
-# プラグインディレクトリ
-PLUGIN_DIR="$HOME/.dotfiles/.zsh"
-
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Load a few important annexes, without Turbo
-# (this is currently required for annexes)
-zinit light-mode for \
-    zdharma-continuum/zinit-annex-as-monitor \
-    zdharma-continuum/zinit-annex-bin-gem-node \
-    zdharma-continuum/zinit-annex-patch-dl \
-    zdharma-continuum/zinit-annex-rust
-
-### End of Zinit's installer chunk
-
-# Plugins managed by Zinit
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-history-substring-search
-
-. `brew --prefix`/etc/profile.d/z.sh
+# brew --prefixは重いため、絶対パスに固定
+. /opt/homebrew/etc/profile.d/z.sh
 
 # color
 
 # 下線を削除するために、zsh-syntax-highlightingのスタイルを設定
+typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]='none'
 
 # コマンドの色を設定
@@ -178,8 +160,12 @@ for style in command builtin reserved-word alias function; do
 done
 
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
-eval "$(pyenv init --path)"
+
+# pyenv / rbenv は重いため、PATHだけ通してコマンド実行時に初期化する
+export PATH="$HOME/.rbenv/shims:$HOME/.pyenv/shims:$PATH"
+rbenv() { unset -f rbenv; eval "$(command rbenv init - zsh)"; rbenv "$@" }
+pyenv() { unset -f pyenv; eval "$(command pyenv init - zsh)"; pyenv "$@" }
+
 export PATH="$HOME/.gem/ruby/3.2.6/bin:$PATH"
 export PATH="/Users/umehararyu/.rbenv/versions/3.2.6/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"
@@ -203,3 +189,5 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
 # Added by Antigravity
 export PATH="/Users/umehararyu/.antigravity/antigravity/bin:$PATH"
+
+zprof
