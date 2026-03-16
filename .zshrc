@@ -198,4 +198,4 @@ export PATH="$HOME/.nodebrew/current/bin:$PATH"
 # Added by Antigravity
 export PATH="/Users/umehararyu/.antigravity/antigravity/bin:$PATH"
 
-zprof
+# zprof
