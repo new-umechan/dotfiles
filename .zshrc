@@ -1,5 +1,3 @@
-source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
-
 # ロード時間をzprofで
 zmodload zsh/zprof
 
@@ -77,14 +75,23 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-zinit ice wait'1' lucid
-zinit light zsh-users/zsh-autosuggestions
+# 速度のため、既存プラグインを手動で読み込む
+[ -f "$HOME/.zprezto/modules/autosuggestions/external/zsh-autosuggestions.zsh" ] \
+    && source "$HOME/.zprezto/modules/autosuggestions/external/zsh-autosuggestions.zsh"
+[ -f "$HOME/.zprezto/modules/history-substring-search/external/zsh-history-substring-search.zsh" ] \
+    && source "$HOME/.zprezto/modules/history-substring-search/external/zsh-history-substring-search.zsh"
+(( ${+functions[_zsh_autosuggest_bind_widgets]} )) && _zsh_autosuggest_bind_widgets
 
-zinit ice wait'1' lucid
-zinit light zsh-users/zsh-history-substring-search
+__load_syntax_highlighting_once() {
+  local f="$HOME/.zprezto/modules/syntax-highlighting/external/zsh-syntax-highlighting.zsh"
+  [ -f "$f" ] || return
+  source "$f"
+  (( ${+functions[_zsh_highlight_bind_widgets]} )) && _zsh_highlight_bind_widgets
+  add-zsh-hook -d precmd __load_syntax_highlighting_once
+}
 
-zinit ice wait'1' lucid atload'_zsh_highlight_bind_widgets; _zsh_autosuggest_bind_widgets'
-zinit light zsh-users/zsh-syntax-highlighting
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd __load_syntax_highlighting_once
 
 # ------ キーバインド -----------------------
 
@@ -142,11 +149,12 @@ if [ -f ~/.zprofile ]; then
 	source ~/.zprofile
 fi
 
-autoload -Uz _zinit
-(( ${+_comps} )) && _comps[zinit]=_zinit
-
 # brew --prefixは重いため、絶対パスに固定
-. /opt/homebrew/etc/profile.d/z.sh
+z() {
+  unfunction z
+  . /opt/homebrew/etc/profile.d/z.sh
+  z "$@"
+}
 
 # color
 
