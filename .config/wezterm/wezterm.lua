@@ -25,6 +25,16 @@ local function get_tab_title(tab)
 		return "codex"
 	end
 
+    if title == "nvim" then
+        local cwd = tab.active_pane.current_working_dir
+        if cwd then
+            local dir_name = cwd.file_path:gsub("(.*[/\\])(.*)", "%2")
+			-- リッチにしたくなったら
+            -- return " " .. (dir_name ~= "" and dir_name or "nvim")
+			return (dir_name ~= "" and dir_name or "nvim")
+        end
+    end
+
 	return title
 end
 
