@@ -167,22 +167,7 @@ require("lazy").setup({
 		},
 
 		-- markdown設定
-		{
-			"ixru/nvim-markdown",
-			ft = "markdown", -- ファイルタイプ固有で読み込み
-			config = function()
-				vim.g.vim_markdown_conceal = 1
-				vim.g.vim_markdown_conceal_code_blocks = 1
-
-				vim.api.nvim_create_autocmd("filetype", {
-					pattern = "markdown",
-					callback = function()
-						vim.opt_local.conceallevel = 0
-						vim.opt_local.concealcursor = "nc"
-					end
-				})
-			end,
-		},
+		-- { import = "ume.plugins.render-markdown" },
 
 		-- 編集強化
 		{ import = "ume.plugins.surround" },
@@ -229,6 +214,8 @@ require("lazy").setup({
 
 		-- jupytor notebook的な感じに
 		{ import = "ume.plugins.iron" }
+
+		-- r
 	},
 }, {
 		ui = {
