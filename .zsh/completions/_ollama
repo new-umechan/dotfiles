@@ -1,0 +1,26 @@
+#compdef ollama
+
+_ollama() {
+    local line
+    _arguments -C \
+        "1: :((serve\:'Start ollama'
+               create\:'Create a model from a Modelfile'
+               show\:'Show information for a model'
+               run\:'Run a model'
+               pull\:'Pull a model from a registry'
+               push\:'Push a model to a registry'
+               list\:'List models'
+               ps\:'List running models'
+               cp\:'Copy a model'
+               rm\:'Remove a model'
+               help\:'Help about any command'))" \
+        "*::arg:->args"
+
+    case $line[1] in
+        run|show|pull|push|cp|rm)
+            _arguments "*:model:($(ollama list | tail -n +2 | awk '{print $1}'))"
+            ;;
+    esac
+}
+
+_ollama "$@"

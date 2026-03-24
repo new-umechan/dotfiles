@@ -45,18 +45,35 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 ########################################
-# 補完
-# 補完機能を有効にする
+# 補完設定
+########################################
+
+# 1. パスの設定 (必ず autoload より上に書く)
+fpath=(~/.zsh/completions $fpath)
+
+# 2. 補完の初期化
 autoload -Uz compinit
+compinit -C
 
-__lazy_compinit() {
-  compinit -C
-  bindkey '^I' expand-or-complete
-  zle expand-or-complete
-}
+# 3. 視覚強化・マッチング設定
+# 矢印キーで補完候補を選択できる
+zstyle ':completion:*:default' menu select=2
+# 補完候補に色を付ける
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# 大文字小文字を区別しない + 部分一致 + ハイフン/アンダースコア無視
+zstyle ':completion:*' matcher-list 'm:{a-z A-Z}={A-Z a-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+# 補完候補をグループ化して説明を表示
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*' group-name ''
 
-zle -N __lazy_compinit
-bindkey '^I' __lazy_compinit
+# 4. その他の微調整
+zstyle ':completion:*' ignore-parents parent pwd ..
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+
+# Tabキーの設定を標準に戻す
+bindkey '^I' expand-or-complete
+
+########################################
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
