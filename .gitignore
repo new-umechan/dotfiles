@@ -23,3 +23,7 @@
 !.gitignore
 
 /.config/raycast/extensions/
+
+/.config/karabiner/automatic_backups
+/.config/opencode/opencode.json
+/.config/mole/*
