@@ -162,6 +162,39 @@
 						}
 					],
 					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "a",
+						"modifiers": {
+							"mandatory": ["fn"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{ "shell_command": "open -a 'Arc'" }],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "s",
+						"modifiers": {
+							"mandatory": ["fn"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{ "shell_command": "open -a 'Slack'" }],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "w",
+						"modifiers": {
+							"mandatory": ["fn"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{ "shell_command": "open -a 'Wezterm'" }],
+					"type": "basic"
 				}
 			]
 		},
