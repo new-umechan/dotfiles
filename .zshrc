@@ -58,8 +58,6 @@ compinit -C
 # 3. 視覚強化・マッチング設定
 # 矢印キーで補完候補を選択できる
 zstyle ':completion:*:default' menu select=2
-# 補完候補に色を付ける
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # 大文字小文字を区別しない + 部分一致 + ハイフン/アンダースコア無視
 zstyle ':completion:*' matcher-list 'm:{a-z A-Z}={A-Z a-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 # 補完候補をグループ化して説明を表示
