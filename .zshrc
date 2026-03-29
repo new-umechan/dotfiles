@@ -210,7 +210,7 @@ if [ -f ~/.api_keys ]; then
 fi
 export PATH="$HOME/.nodebrew/current/bin:$PATH"
 
-# Added by Antigravity
 export PATH="/Users/umehararyu/.antigravity/antigravity/bin:$PATH"
+export OLLAMA_MODELS="/Volumes/ssd/ollama-models"
 
 # zprof
