@@ -27,3 +27,5 @@
 /.config/karabiner/automatic_backups
 /.config/opencode/opencode.json
 /.config/mole/*
+
+/.config/configstore/
