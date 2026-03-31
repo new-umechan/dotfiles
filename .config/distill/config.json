@@ -1,4 +1,4 @@
 {
-  "model": "qwen3.5:4b",
+  "model": "qwen3.5:2b",
   "thinking": false
 }
