@@ -167,7 +167,7 @@ require("lazy").setup({
 		},
 
 		-- markdown設定
-		-- { import = "ume.plugins.render-markdown" },
+		{ import = "ume.plugins.render-markdown" },
 
 		-- 編集強化
 		{ import = "ume.plugins.surround" },
