@@ -72,6 +72,18 @@ local function prompt_rename_tab_action()
 	})
 end
 
+wezterm.on("update-right-status", function(window, _)
+	local workspaces = wezterm.mux.get_workspace_names()
+
+	-- default しか無いなら表示しない
+	if #workspaces == 1 and workspaces[1] == "default" then
+		window:set_right_status("")
+		return
+	end
+
+	window:set_right_status(" space: " .. window:active_workspace() .. "    ")
+end)
+
 wezterm.on("gui-startup", function(cmd)
 	local _, _, window = mux.spawn_window(cmd or {})
 	window:gui_window():maximize()
@@ -110,11 +122,6 @@ return {
 			action = act.SendString("\\"),
 		},
         {
-            key = "e",
-            mods = "CTRL",
-            action = wezterm.action.DisableDefaultAssignment,
-        },
-        {
             key = "LeftArrow",
             mods = "CMD|SHIFT",
             action = act.MoveTabRelative(-1),
@@ -124,10 +131,75 @@ return {
             mods = "CMD|SHIFT",
             action = act.MoveTabRelative(1),
         },
-    },
+		{
+			key = 'd',
+			mods = 'CMD',
+			action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }, -- これを以下に書き換え
+		},
+		{
+			key = 'd',
+			mods = 'CMD|SHIFT',
+			action = act.SplitVertical { domain = 'CurrentPaneDomain' }, -- これを以下に書き換え
+		},
+		{
+			key = '[',
+			mods = 'CMD',
+			action = act.ActivatePaneDirection 'Prev',
+		},
+		{
+			key = ']',
+			mods = 'CMD',
+			action = act.ActivatePaneDirection 'Next',
+		},
+		{
+			key = 's',
+			mods = 'CMD',
+			action = act.ActivatePaneDirection 'Next',
+		},
+		{
+			key = 'p',
+			mods = 'CMD|SHIFT',
+			action = act.ShowLauncherArgs { flags = 'WORKSPACES' , title = "Select workspace" },
+		},
+		{
+			-- Create new workspace
+			mods = 'CMD|SHIFT',
+			key = 'n',
+			action = act.PromptInputLine {
+				description = "(wezterm) Create new workspace:",
+				action = wezterm.action_callback(function(window, pane, line)
+					if line then
+						window:perform_action(
+							act.SwitchToWorkspace {
+								name = line,
+							},
+							pane
+						)
+					end
+				end),
+			},
+		},
+		{
+			-- Rename workspace
+			mods = 'CMD|SHIFT',
+			key = 'r',
+			action = act.PromptInputLine {
+				description = '(wezterm) Set workspace title:',
+				action = wezterm.action_callback(function(win,pane,line)
+					if line then
+						wezterm.mux.rename_workspace(
+							wezterm.mux.get_active_workspace(),
+							line
+						)
+					end
+				end),
+			},
+		},
+	},
 	colors = {
 		cursor_bg = "#72c9d1",
 		cursor_fg = "#ffffff",
+		split = "#0f1117",
 		tab_bar = {
 			background = TAB_COLORS.inactive.background,
 		},
