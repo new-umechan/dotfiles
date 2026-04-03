@@ -81,7 +81,7 @@ wezterm.on("update-right-status", function(window, _)
 		return
 	end
 
-	window:set_right_status(" space: " .. window:active_workspace() .. "    ")
+	window:set_right_status("  " .. window:active_workspace() .. "    ")
 end)
 
 wezterm.on("gui-startup", function(cmd)
