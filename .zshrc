@@ -214,3 +214,5 @@ export PATH="/Users/umehararyu/.antigravity/antigravity/bin:$PATH"
 export OLLAMA_MODELS="/Volumes/ssd/ollama-models"
 
 # zprof
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
