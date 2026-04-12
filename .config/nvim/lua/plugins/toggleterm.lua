@@ -2,6 +2,9 @@ return {
 	'akinsho/toggleterm.nvim',
 	version = "*",
 	cmd = { "ToggleTerm", "TermExec" },
+	keys = {
+		{ "<space>t", "<cmd>ToggleTerm<CR>", desc = "Toggle Terminal" }
+	},
 	config = function()
 		require('toggleterm').setup({
 			size = 60,

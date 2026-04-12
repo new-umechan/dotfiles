@@ -34,11 +34,6 @@ return {
 			severity_sort = true,
 		})
 
-		require("mason-lspconfig").setup({
-			ensure_installed = { "pyright", "ruff", "lua_ls" },
-			automatic_enable = false,
-		})
-
 		vim.lsp.config("pyright", {
 			capabilities = capabilities,
 			on_attach = on_attach,

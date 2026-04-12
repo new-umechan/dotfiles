@@ -3,8 +3,8 @@ return {
 	event = { "InsertEnter", "CmdlineEnter" },
 	version = false,
 	dependencies = {
-		{ "saadparwaiz1/cmp_luasnip" }, -- LuaSnip と nvim-cmp を統合
 		{ "L3MON4D3/LuaSnip" }, -- スニペットエンジン LuaSnip
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",

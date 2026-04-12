@@ -1,22 +1,19 @@
 return {
 	"lewis6991/gitsigns.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	keys = {
+		{ "sj", ":Gitsigns next_hunk<CR>", desc = "Next hunk" },
+		{ "sk", ":Gitsigns prev_hunk<CR>", desc = "Previous hunk" },
+		{ "sr", ":Gitsigns reset_hunk<CR>", desc = "Reset hunk" },
+	},
 	config = function()
 		require('gitsigns').setup {
 			signs = {
-				add          = { text = '┃' },
-				change       = { text = '┃' },
+				add          = { text = '+' },
+				change       = { text = '~' },
 				delete       = { text = '_' },
 				topdelete    = { text = '‾' },
 				changedelete = { text = '~' },
-				untracked    = { text = '┆' },
-			},
-			signs_staged = {
-				add          = { text = '┃' },
-				change       = { text = '┃' },
-				delete       = { text = '_' },
-				topdelete    = { text = '‾' },
-				changedelete = { text = '~' },
-				untracked    = { text = '┆' },
 			},
 			signs_staged_enable = true,
 			signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`

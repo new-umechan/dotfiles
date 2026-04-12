@@ -6,7 +6,7 @@ return {
 	},
 	config = function()
 		-- カスタムスニペットのロード
-		local custom_snippets_path = vim.fn.expand("~/.config/nvim/lua/ume/snippets/")
+		local custom_snippets_path = vim.fn.expand("~/.config/nvim/lua/snippets/")
 		if vim.fn.isdirectory(custom_snippets_path) == 1 then
 			require("luasnip.loaders.from_lua").load({ paths = custom_snippets_path })
 		else

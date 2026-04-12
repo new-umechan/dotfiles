@@ -1,4 +1,4 @@
--- keymap
+-- 汎用キーマップ設定
 
 vim.g.mapleader = ' ' -- leaderキー
 -- スペースキーを無効化
