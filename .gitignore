@@ -29,3 +29,5 @@
 /.config/mole/*
 
 /.config/configstore/
+
+.DS_Store
