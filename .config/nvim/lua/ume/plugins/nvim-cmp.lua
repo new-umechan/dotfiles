@@ -19,8 +19,15 @@ return {
 
 		cmp.setup({
 			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+				completion = {
+					border = "rounded",
+					winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+					scrollbar = false,
+				},
+				documentation = {
+					border = "rounded",
+					winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel,Search:None",
+				},
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<Tab>"]   = cmp.mapping.select_next_item(),
@@ -28,12 +35,11 @@ return {
 				["<CR>"]    = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = cmp.config.sources({
-				-- { name = "nvim_lsp", max_item_count = 5 },
-				{ name = "luasnip", priority_weight = 15 },
+				{ name = "luasnip" },
 			}, {
-				{ name = "buffer", priority_weight = 15 },
-				{ name = "path",   priority_weight = 15 },
-			}),
+					{ name = "buffer" },
+					{ name = "path" },
+				}),
 		})
 
 		cmp.setup.cmdline({ "/", "?" }, {

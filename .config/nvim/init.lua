@@ -17,6 +17,10 @@ vim.api.nvim_set_hl(0, "@markup.raw.markdown", { fg = "#89b8c2", bg = "NONE" })
 vim.api.nvim_set_hl(0, "markdownCode", { fg = "#89b8c2", bg = "NONE" })
 vim.api.nvim_set_hl(0, "markdownCodeDelimiter", { fg = "#89b8c2", bg = "NONE" })
 
+vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Pmenu", { link = "Normal" })
+vim.api.nvim_set_hl(0, "PmenuSel", { link = "CursorLine" })
+
 -- windowセパレータを空白に設定したよ（一バイト文字しか読み込めない）
 vim.opt.fillchars = { vert = ' ' }
 
