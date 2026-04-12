@@ -5,6 +5,7 @@ return {
 		{ "sj", ":Gitsigns next_hunk<CR>", desc = "Next hunk" },
 		{ "sk", ":Gitsigns prev_hunk<CR>", desc = "Previous hunk" },
 		{ "sr", ":Gitsigns reset_hunk<CR>", desc = "Reset hunk" },
+		{ "sd", ":Gitsigns diffthis<CR>", desc = "Show diff" },
 	},
 	config = function()
 		require('gitsigns').setup {
