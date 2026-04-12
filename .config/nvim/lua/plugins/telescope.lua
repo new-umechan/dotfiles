@@ -19,4 +19,17 @@ return {
 		{ "<leader>kk", "<cmd>Telescope smart_open<cr>", desc = "Smart open" },
 		{ "<leader>kf", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
 	},
+	config = function()
+		local telescope = require("telescope")
+
+		telescope.setup({
+			extensions = {
+				smart_open = {
+					cwd_only = true,
+				},
+			},
+		})
+
+		telescope.load_extension("smart_open")
+	end,
 }
