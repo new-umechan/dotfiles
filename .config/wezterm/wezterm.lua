@@ -20,11 +20,6 @@ local custom_tab_titles = {}
 local function get_tab_title(tab)
 	local title = custom_tab_titles[tab.tab_id] or tab.active_pane.title
 
-	-- codexの名前を短くする用
-	if title == "codex-aarch64-apple-darwin" then
-		return "codex"
-	end
-
     if title == "nvim" then
         local cwd = tab.active_pane.current_working_dir
         if cwd then
