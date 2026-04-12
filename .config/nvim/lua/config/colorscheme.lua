@@ -12,3 +12,7 @@ vim.api.nvim_set_hl(0, "@markup.raw", { fg = "#89b8c2", bg = "NONE" })
 vim.api.nvim_set_hl(0, "@markup.raw.markdown", { fg = "#89b8c2", bg = "NONE" })
 vim.api.nvim_set_hl(0, "markdownCode", { fg = "#89b8c2", bg = "NONE" })
 vim.api.nvim_set_hl(0, "markdownCodeDelimiter", { fg = "#89b8c2", bg = "NONE" })
+
+vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
+vim.api.nvim_set_hl(0, "Pmenu", { link = "Normal" })
+vim.api.nvim_set_hl(0, "PmenuSel", { link = "CursorLine" })
