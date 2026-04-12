@@ -31,3 +31,4 @@
 /.config/configstore/
 
 .DS_Store
+**/.qwen/
