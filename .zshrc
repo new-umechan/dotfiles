@@ -48,28 +48,47 @@ SAVEHIST=1000000
 # 補完設定
 ########################################
 
-# 1. パスの設定 (必ず autoload より上に書く)
 fpath=(~/.zsh/completions $fpath)
 
-# 2. 補完の初期化
 autoload -Uz compinit
 compinit -C
 
-# 3. 視覚強化・マッチング設定
-# 矢印キーで補完候補を選択できる
-zstyle ':completion:*:default' menu select=2
-# 大文字小文字を区別しない + 部分一致 + ハイフン/アンダースコア無視
-zstyle ':completion:*' matcher-list 'm:{a-z A-Z}={A-Z a-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-# 補完候補をグループ化して説明を表示
-zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+# 補完メニュー
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-separator ' ─ '
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
+zstyle ':completion:*:messages' format '%F{purple}-- %d --%f'
+zstyle ':completion:*:warnings' format '%F{red}no matches: %d%f'
 
-# 4. その他の微調整
-zstyle ':completion:*' ignore-parents parent pwd ..
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
+# 大文字小文字無視 + 部分一致 + 記号ゆるめ
+zstyle ':completion:*' matcher-list \
+  'm:{a-zA-Z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*' \
+  'l:|=* r:|=*'
 
-# Tabキーの設定を標準に戻す
-bindkey '^I' expand-or-complete
+# 候補の色
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# プロセス補完を見やすく
+zstyle ':completion:*:*:(kill|ps):*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# cd 補完を強化
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*:cd:*' ignore-parents parent pwd ..
+
+# sudo の後ろでもコマンド補完
+zstyle ':completion:*:sudo:*' command-path \
+  /opt/homebrew/bin /opt/homebrew/sbin \
+  /usr/local/bin /usr/local/sbin \
+  /usr/bin /usr/sbin /bin /sbin
+
+# キャッシュで少し高速化
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# Tab
+bindkey '^I' complete-word
 
 ########################################
 
