@@ -8,26 +8,10 @@ return {
 		},
 		opts = {
 			render_modes = { "n", "c", "t" },
-
-			anti_conceal = {
-				enabled = false,
-			},
-
-			heading = {
-				enabled = false,
-			},
-
-			pipe_table = {
-				enabled = false,
-			},
-
-			code = {
-				enabled = false,
-			},
-
-			inline_code = {
-				enabled = false,
-			},
+			code = { enabled = false },
+			heading = { enabled = false },
+			pipe_table = { enabled = false },
+			anti_conceal = { enabled = false },
 
 			bullet = {
 				enabled = false,
@@ -48,18 +32,13 @@ return {
 				},
 			},
 
-			quote = {
-				enabled = false,
-			},
 
 			win_options = {
 				concealcursor = {
 					rendered = "n",
-					raw = "n",
 				},
 				conceallevel = {
 					rendered = 2,
-					raw = 0,
 				},
 			},
 		},
