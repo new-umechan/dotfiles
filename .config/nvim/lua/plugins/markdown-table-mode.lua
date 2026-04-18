@@ -6,7 +6,7 @@ return {
 			options = {
 				insert = true, -- when typing "|"
 				insert_leave = true, -- when leaving insert
-				pad_separator_line = false, -- add space in separator line
+				pad_separator_line = true, -- add space in separator line
 				align_style = 'default', -- default, left, center, right
 			},
 		})
