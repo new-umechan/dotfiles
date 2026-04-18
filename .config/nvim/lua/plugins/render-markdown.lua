@@ -38,7 +38,7 @@ return {
 					rendered = "n",
 				},
 				conceallevel = {
-					rendered = 2,
+					rendered = 0,
 				},
 			},
 		},
