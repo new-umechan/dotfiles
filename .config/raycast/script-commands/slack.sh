@@ -10,7 +10,7 @@
 
 osascript <<'APPLESCRIPT'
 tell application "Arc" to activate
-delay 0.15
+delay 0.10
 
 tell application "System Events"
   key code 102
