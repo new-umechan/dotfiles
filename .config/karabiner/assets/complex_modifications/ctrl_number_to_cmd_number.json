@@ -1,0 +1,120 @@
+{
+	"title": "Ctrl+number to EISUU then control+number",
+	"rules": [
+		{
+			"description": "Ctrl+1..0 -> EISUU, then control+1..0",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "1",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "1", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "2",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "2", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "3",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "3", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "4",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "4", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "5",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "5", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "6",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "6", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "7",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "7", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "8",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "8", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "9",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "9", "modifiers": ["control"] }
+					]
+				},
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "0",
+						"modifiers": { "mandatory": ["control"] }
+					},
+					"to": [
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "0", "modifiers": ["control"] }
+					]
+				}
+			]
+		}
+	]
+}
