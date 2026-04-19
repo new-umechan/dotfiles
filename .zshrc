@@ -44,9 +44,29 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-########################################
+# プラグイン（遅延ロード）
+
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
+# 速度のため、既存プラグインを手動で読み込む
+[ -f "$HOME/.zprezto/modules/autosuggestions/external/zsh-autosuggestions.zsh" ] \
+    && source "$HOME/.zprezto/modules/autosuggestions/external/zsh-autosuggestions.zsh"
+[ -f "$HOME/.zprezto/modules/history-substring-search/external/zsh-history-substring-search.zsh" ] \
+    && source "$HOME/.zprezto/modules/history-substring-search/external/zsh-history-substring-search.zsh"
+(( ${+functions[_zsh_autosuggest_bind_widgets]} )) && _zsh_autosuggest_bind_widgets
+
+__load_syntax_highlighting_once() {
+  local f="$HOME/.zprezto/modules/syntax-highlighting/external/zsh-syntax-highlighting.zsh"
+  [ -f "$f" ] || return
+  source "$f"
+  (( ${+functions[_zsh_highlight_bind_widgets]} )) && _zsh_highlight_bind_widgets
+  add-zsh-hook -d precmd __load_syntax_highlighting_once
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd __load_syntax_highlighting_once
+
 # 補完設定
-########################################
 
 fpath=(~/.zsh/completions $fpath)
 
@@ -88,44 +108,20 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # Tab
-bindkey '^I' complete-word
+bindkey '^I' expand-or-complete
 
-########################################
+_smart_ctrl_e() {
+  if (( CURSOR == $#BUFFER )); then
+	if [[ -n "$POSTDISPLAY" ]]; then
+	  zle autosuggest-accept
+	  return
+	fi
+  fi
 
-# 補完で小文字でも大文字にマッチさせる
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# ../ の後は今いるディレクトリを補完しない
-zstyle ':completion:*' ignore-parents parent pwd ..
-
-# sudo の後ろでコマンド名を補完する
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-	/usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
-	########################################
-
-#=============================
-# プラグイン（遅延ロード）
-#=============================
-
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-
-# 速度のため、既存プラグインを手動で読み込む
-[ -f "$HOME/.zprezto/modules/autosuggestions/external/zsh-autosuggestions.zsh" ] \
-    && source "$HOME/.zprezto/modules/autosuggestions/external/zsh-autosuggestions.zsh"
-[ -f "$HOME/.zprezto/modules/history-substring-search/external/zsh-history-substring-search.zsh" ] \
-    && source "$HOME/.zprezto/modules/history-substring-search/external/zsh-history-substring-search.zsh"
-(( ${+functions[_zsh_autosuggest_bind_widgets]} )) && _zsh_autosuggest_bind_widgets
-
-__load_syntax_highlighting_once() {
-  local f="$HOME/.zprezto/modules/syntax-highlighting/external/zsh-syntax-highlighting.zsh"
-  [ -f "$f" ] || return
-  source "$f"
-  (( ${+functions[_zsh_highlight_bind_widgets]} )) && _zsh_highlight_bind_widgets
-  add-zsh-hook -d precmd __load_syntax_highlighting_once
+  zle end-of-line
 }
-
-autoload -Uz add-zsh-hook
-add-zsh-hook precmd __load_syntax_highlighting_once
+zle -N _smart_ctrl_e
+bindkey '^E' _smart_ctrl_e
 
 # ------ キーバインド -----------------------
 
