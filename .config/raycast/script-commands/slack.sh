@@ -13,6 +13,8 @@ tell application "Arc" to activate
 delay 0.15
 
 tell application "System Events"
+  key code 102
+  delay 0.02
   keystroke "3" using control down
   delay 0.05
   keystroke "5" using command down
