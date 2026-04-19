@@ -12,10 +12,8 @@ return {
 			heading = { enabled = false },
 			pipe_table = { enabled = false },
 			anti_conceal = { enabled = false },
-
-			bullet = {
-				enabled = false,
-			},
+			dash = { enabled = false },
+			bullet = { enabled = false },
 
 			checkbox = {
 				enabled = true,

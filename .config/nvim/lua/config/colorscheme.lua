@@ -21,4 +21,4 @@ set_hl(0, "NormalFloat", { link = "Normal" })
 set_hl(0, "Pmenu", { link = "Normal" })
 set_hl(0, "PmenuSel", { link = "CursorLine" })
 
-set_hl(0, "RenderMarkdownDash", { fg = vs.fg, bg = vs.bg })
+-- set_hl(0, "RenderMarkdownDash", { fg = vs.fg, bg = vs.bg })
