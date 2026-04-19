@@ -45,9 +45,6 @@ return {
 
 		config = function(_, opts)
 			require("render-markdown").setup(opts)
-
-			local set_hl = vim.api.nvim_set_hl
-			set_hl(0, "RenderMarkdownBullet", { link = "Comment" })
 		end,
 	},
 }
