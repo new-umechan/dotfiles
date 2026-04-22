@@ -232,3 +232,11 @@ export OLLAMA_MODELS="/Volumes/ssd/ollama-models"
 # zprof
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/umehararyu/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
