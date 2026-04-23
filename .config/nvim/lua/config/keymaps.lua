@@ -56,3 +56,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>f', '<c-w>w')
 
 -- 相対パスのコピー
 vim.keymap.set('n', '<leader>y', ":let @+ = expand('%:.')<CR>")
+
+-- カーソル下のファイルを縦分割で開くように
+vim.keymap.set("n", "<C-w>f", ":vertical wincmd f<CR>", { silent = true })
