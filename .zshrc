@@ -125,9 +125,24 @@ bindkey '^E' _smart_ctrl_e
 
 # ------ キーバインド -----------------------
 
-alias nv='nvim'
+nv() {
+  nvim "$@"
+}
 
-alias shogun="~/prog/tools/multi-agent-shogun/shutsujin_departure.sh -c"
+_nv_with_date_prefix() {
+  local cur
+  cur="${words[CURRENT]}"
+
+  local -a matches
+  matches=(
+    ${~:-*_${cur}*(N)}
+  )
+
+  _files
+  (( ${#matches} )) && _describe 'files with date prefix' matches
+}
+
+compdef _nv_with_date_prefix nv
 
 tree() {
   [ -d .git ] && eza --tree --git-ignore "$@" || eza --tree "$@"
@@ -165,6 +180,29 @@ uvcd() {
 }
 EOF
 }
+
+_cd_with_date_prefix() {
+  local expl
+  local -a dirs
+
+  # 通常のディレクトリ候補
+  dirs=(${(f)"$(ls -d */ 2>/dev/null)"})
+
+  # 入力された文字列
+  local prefix="$words[2]"
+
+  # 日付付きディレクトリもマッチさせる
+  local matches=()
+  for d in $dirs; do
+    if [[ "$d" == *_$prefix* ]]; then
+      matches+="$d"
+    fi
+  done
+
+  _describe 'dirs with date prefix' matches
+}
+
+compdef _cd_with_date_prefix cd
 
 
 p5init() {
