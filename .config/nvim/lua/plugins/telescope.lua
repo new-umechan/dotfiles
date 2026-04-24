@@ -18,6 +18,7 @@ return {
 	keys = {
 		{ "<leader>kk", "<cmd>Telescope smart_open<cr>", desc = "Smart open" },
 		{ "<leader>kf", "<cmd>Telescope live_grep<cr>", desc = "Live grep" },
+		{ "<leader>kg", "<cmd>Telescope git_status<cr>", desc = "git status" },
 	},
 	config = function()
 		local telescope = require("telescope")
