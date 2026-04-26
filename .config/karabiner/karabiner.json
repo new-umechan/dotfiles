@@ -345,7 +345,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "shell_command": "front=$(osascript -e 'tell application \"System Events\" to get bundle identifier of first process whose frontmost is true'); if [ \"$front\" = \"com.github.wez.wezterm\" ]; then open -a 'Arc'; else open -a 'WezTerm'; fi" }],
+                                "to": [{ "key_code": "f18" }],
                                 "type": "basic"
                             },
                             {
