@@ -129,6 +129,7 @@ _nv_files() {
   _files
 }
 compdef _nv_files nv
+alias nv='nvim'
 
 tree() {
   [ -d .git ] && eza --tree --git-ignore "$@" || eza --tree "$@"
