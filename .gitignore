@@ -32,3 +32,4 @@
 
 .DS_Store
 **/.qwen/
+.config/opencode/package-lock.json
