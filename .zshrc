@@ -125,24 +125,10 @@ bindkey '^E' _smart_ctrl_e
 
 # ------ キーバインド -----------------------
 
-nv() {
-  nvim "$@"
-}
-
-_nv_with_date_prefix() {
-  local cur
-  cur="${words[CURRENT]}"
-
-  local -a matches
-  matches=(
-    ${~:-*_${cur}*(N)}
-  )
-
+_nv_files() {
   _files
-  (( ${#matches} )) && _describe 'files with date prefix' matches
 }
-
-compdef _nv_with_date_prefix nv
+compdef _nv_files nv
 
 tree() {
   [ -d .git ] && eza --tree --git-ignore "$@" || eza --tree "$@"
@@ -180,30 +166,6 @@ uvcd() {
 }
 EOF
 }
-
-_cd_with_date_prefix() {
-  local expl
-  local -a dirs
-
-  # 通常のディレクトリ候補
-  dirs=(${(f)"$(ls -d */ 2>/dev/null)"})
-
-  # 入力された文字列
-  local prefix="$words[2]"
-
-  # 日付付きディレクトリもマッチさせる
-  local matches=()
-  for d in $dirs; do
-    if [[ "$d" == *_$prefix* ]]; then
-      matches+="$d"
-    fi
-  done
-
-  _describe 'dirs with date prefix' matches
-}
-
-compdef _cd_with_date_prefix cd
-
 
 p5init() {
   cp -- "$HOME/.config/p5_temp"/{index.html,sketch.js,package.json} . \
