@@ -1,5 +1,6 @@
 return {
 	"NickvanDyke/opencode.nvim",
+	enabled = false;
 	config = function()
 		---@type opencode.Opts
 		vim.g.opencode_opts = {
