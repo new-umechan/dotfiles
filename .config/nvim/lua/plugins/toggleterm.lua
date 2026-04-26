@@ -20,6 +20,13 @@ return {
 		function _G.set_terminal_keymaps()
 			local opts = { noremap = true, silent = true }
 			vim.api.nvim_buf_set_keymap(0, 't', '<Esc>', [[<C-\><C-n>]], opts) -- 通常モードに戻る
+
+			vim.keymap.set('t', '<Space>', '<Space>', {
+				noremap = true,
+				silent = true,
+				buffer = 0,
+				nowait = true,
+			})
 		end
 
 		vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
