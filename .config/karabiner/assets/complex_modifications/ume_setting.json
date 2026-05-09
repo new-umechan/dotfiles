@@ -183,9 +183,8 @@
 						}
 					},
 					"to": [
-						{
-							"key_code": "f18"
-						}
+						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "f18" }
 					],
 					"type": "basic"
 				},
