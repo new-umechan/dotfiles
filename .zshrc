@@ -209,7 +209,6 @@ pyenv() { unset -f pyenv; eval "$(command pyenv init - zsh)"; pyenv "$@" }
 export PATH="$HOME/.gem/ruby/3.2.6/bin:$PATH"
 export PATH="/Users/umehararyu/.rbenv/versions/3.2.6/bin:$PATH"
 export PATH="$HOME/.gem/ruby/3.2.0/bin:$PATH"
-export DYLD_LIBRARY_PATH=/opt/homebrew/lib:$DYLD_LIBRARY_PATH
 
 # Created by `pipx` on 2025-01-17 09:52:54
 export PATH="$PATH:/Users/umehararyu/.local/bin"
