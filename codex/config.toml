@@ -1,0 +1,168 @@
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+sandbox_mode = "danger-full-access"
+approval_policy = "on-request"
+suppress_unstable_features_warning = true
+
+# [mcp_servers.figma]
+# command = "npx"
+# args = ["-y", "mcp-remote", "http://127.0.0.1:3845/sse"]
+
+cli_auth_credentials_store = "file"
+
+[sandbox_workspace_write]
+network_access = true
+
+[projects."/Users/umehararyu/prog/CreativeCoding/251028_math_plant"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/html&css/251105_enshu_mesh"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/python/2025_winter_GCI/competition1_copy"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day001"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day003"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day004"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day005"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day006"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day007"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/root/授業/英語/260206_MyVocabraryList"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day008"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day009"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day010"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day011"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/.codex"]
+trust_level = "untrusted"
+
+[projects."/Users/umehararyu/prog/tools/multi-agent-shogun"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day012"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day013"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day014"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day016"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day017"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day018"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day019"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day020"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/Frey"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day023"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/arduino/lvglsample"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/.codex/themes"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day031"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day032"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day033"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day034"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day036"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day037"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/100days/day061"]
+trust_level = "trusted"
+
+[projects."/Users/umehararyu/prog/markdown"]
+trust_level = "trusted"
+
+[notice]
+"hide_gpt-5.1-codex-max_migration_prompt" = true
+hide_rate_limit_model_nudge = true
+fast_default_opt_out = true
+
+[notice.model_migrations]
+"gpt-5.1-codex-max" = "gpt-5.2-codex"
+"gpt-5.2" = "gpt-5.3-codex"
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.4" = "gpt-5.5"
+
+[tui]
+theme = "Iceberg"
+status_line = ["model-with-reasoning", "context-used", "current-dir", "weekly-limit"]
+terminal_title = ["spinner", "app-name"]
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
+[[rules]]
+pattern = ["pnpm"]
+decision = "allow"
+
+[[rules]]
+pattern = ["distill"]
+decision = "allow"
+
+[features]
+prevent_idle_sleep = true
+hooks = true
+multi_agent = true
+goals = true
+
+[hooks.state]
+
+[hooks.state."/Users/umehararyu/.codex/hooks.json:stop:0:0"]
+enabled = true
+trusted_hash = "sha256:11d944291ce79d55c967854b544ffaf4dd69bd5f009601fce182741502f54b21"
