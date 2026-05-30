@@ -49,6 +49,7 @@ mkdir -p "$HOME/.config"
 # Shell
 link_item "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_item "$DOTFILES_DIR/.zsh" "$HOME/.zsh"
+link_item "$DOTFILES_DIR/.codex" "$HOME/.codex"
 
 # Editor
 link_item "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
