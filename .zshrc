@@ -1,7 +1,12 @@
 # ロード時間をzprofで
 zmodload zsh/zprof
 
-PROMPT='%~ > '
+if [[ -n "$SSH_CONNECTION" ]]; then
+  PROMPT='%F{cyan}[ssh]%f %~ > '
+else
+  PROMPT='%~ > '
+fi
+
 RPROMPT=''
 
 # noramly setting
@@ -240,3 +245,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export PATH="$HOME/.npm-global/bin:$PATH"
