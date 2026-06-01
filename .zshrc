@@ -246,3 +246,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+# macOS / machine-local settings
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
