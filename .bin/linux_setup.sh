@@ -50,6 +50,7 @@ mkdir -p "$HOME/.config"
 link_item "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 link_item "$DOTFILES_DIR/.zsh" "$HOME/.zsh"
 link_item "$DOTFILES_DIR/.codex" "$HOME/.codex"
+link_item "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
 # Editor
 link_item "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
@@ -57,7 +58,7 @@ link_item "$DOTFILES_DIR/.config/nvim" "$HOME/.config/nvim"
 export COLORTERM=truecolor
 
 sudo apt install -y build-essential make gcc g++ cmake unzip curl git ripgrep fd-find nodejs npm
-sudo apt install -y trash-cli lazygit
+sudo apt install -y trash-cli lazygit zoxide
 
 echo
 echo "Done."

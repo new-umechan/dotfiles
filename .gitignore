@@ -50,3 +50,5 @@
 !/codex/skills/
 !/codex/skills/**
 /codex/skills/.system/**
+
+!/.tmux.conf
