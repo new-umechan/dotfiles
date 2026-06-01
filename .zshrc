@@ -71,6 +71,15 @@ __load_syntax_highlighting_once() {
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd __load_syntax_highlighting_once
 
+__wezterm_osc7() {
+  if command -v wezterm >/dev/null 2>&1; then
+    wezterm set-working-directory 2>/dev/null && return 0
+  fi
+
+  printf '\033]7;file://%s%s\033\\' "${HOSTNAME:-$(hostname)}" "${PWD}"
+}
+add-zsh-hook precmd __wezterm_osc7
+
 # 補完設定
 
 fpath=(~/.zsh/completions $fpath)
