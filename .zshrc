@@ -7,7 +7,11 @@ else
   PROMPT='%~ > '
 fi
 
-RPROMPT=''
+if [[ -n "$TMUX" ]]; then
+  RPROMPT="%F{green}tmux%f"
+else
+  RPROMPT=""
+fi
 
 # noramly setting
 
