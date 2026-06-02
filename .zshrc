@@ -80,7 +80,7 @@ __wezterm_osc7() {
     wezterm set-working-directory 2>/dev/null && return 0
   fi
 
-  printf "\033]7;file://%s%s\033\\" "${HOSTNAME:-$(hostname)}" "${PWD}"
+  printf '\033]7;file://%s%s\033\\' "${HOSTNAME:-$(hostname)}" "${PWD}"
 }
 add-zsh-hook precmd __wezterm_osc7
 

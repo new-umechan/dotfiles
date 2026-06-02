@@ -16,6 +16,56 @@ local TAB_COLORS = {
 
 -- タブIDごとのユーザー定義タイトルを保持する
 local custom_tab_titles = {}
+local ssh_domains = wezterm.default_ssh_domains()
+local local_hostname = wezterm.hostname():lower()
+
+for _, dom in ipairs(ssh_domains) do
+	if dom.name:match("^SSH:") then
+		dom.assume_shell = "Posix"
+	end
+end
+
+local function shell_quote(value)
+	return "'" .. value:gsub("'", "'\"'\"'") .. "'"
+end
+
+local function is_local_host(host)
+	if not host or host == "" then
+		return true
+	end
+
+	local normalized = host:lower()
+
+	return normalized == local_hostname
+		or normalized == "localhost"
+		or normalized == "127.0.0.1"
+end
+
+local function spawn_tab_like_current(window, pane)
+	local cwd = pane:get_current_working_dir()
+
+	if not cwd or is_local_host(cwd.host) then
+		window:perform_action(act.SpawnTab("CurrentPaneDomain"), pane)
+		return
+	end
+
+	local remote_cmd = string.format(
+		"cd -- %s 2>/dev/null || cd; exec zsh -l",
+		shell_quote(cwd.file_path)
+	)
+	local ssh_cmd = string.format(
+		"exec ssh %s -t %s",
+		shell_quote(cwd.host),
+		shell_quote("zsh -lc " .. shell_quote(remote_cmd))
+	)
+
+	window:perform_action(
+		act.SpawnCommandInNewTab({
+			args = { "/bin/zsh", "-lc", ssh_cmd },
+		}),
+		pane
+	)
+end
 
 local function get_tab_title(tab)
 	local title = custom_tab_titles[tab.tab_id] or tab.active_pane.title
@@ -90,6 +140,7 @@ end)
 
 return {
 	default_prog = { "/bin/zsh", "--login" },
+	ssh_domains = ssh_domains,
 	window_decorations = "RESIZE",
 	hide_tab_bar_if_only_one_tab = true,
 	tab_max_width = 80,
@@ -106,6 +157,13 @@ return {
 	font_size = 13,
 	color_scheme = "iceberg-dark",
 	keys = {
+		{
+			key = "t",
+			mods = "CMD",
+			action = wezterm.action_callback(function(window, pane)
+				spawn_tab_like_current(window, pane)
+			end),
+		},
 		{
 			key = "r",
 			mods = "CMD",
