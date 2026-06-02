@@ -75,6 +75,15 @@ __load_syntax_highlighting_once() {
 autoload -Uz add-zsh-hook
 add-zsh-hook precmd __load_syntax_highlighting_once
 
+__wezterm_osc7() {
+  if command -v wezterm >/dev/null 2>&1; then
+    wezterm set-working-directory 2>/dev/null && return 0
+  fi
+
+  printf "\033]7;file://%s%s\033\\" "${HOSTNAME:-$(hostname)}" "${PWD}"
+}
+add-zsh-hook precmd __wezterm_osc7
+
 # 補完設定
 
 fpath=(~/.zsh/completions $fpath)
@@ -192,8 +201,19 @@ fi
 
 # brew --prefixは重いため、絶対パスに固定
 z() {
-  unfunction z
-  . /opt/homebrew/etc/profile.d/z.sh
+  unfunction z 2>/dev/null || unset -f z 2>/dev/null
+
+  if [ -f /opt/homebrew/etc/profile.d/z.sh ]; then
+    . /opt/homebrew/etc/profile.d/z.sh
+  elif [ -f /usr/share/zoxide/zoxide.sh ]; then
+    . /usr/share/zoxide/zoxide.sh
+  elif command -v zoxide >/dev/null 2>&1; then
+    eval "$(zoxide init --cmd z "${SHELL##*/}")"
+  else
+    echo "zoxide: command not found" >&2
+    return 127
+  fi
+
   z "$@"
 }
 
