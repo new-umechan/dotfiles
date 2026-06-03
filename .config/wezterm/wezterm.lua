@@ -6,11 +6,11 @@ local TAB_PADDING = "    "
 local TAB_COLORS = {
 	inactive = {
 		background = "#0F1118",
-		foreground = "#C6C8D2",
+		foreground = "#66709a",
 	},
 	active = {
-		background = "#262C44",
-		foreground = "#FFFFFF",
+		background = "#2a3158",
+		foreground = "#cdd1e6",
 	},
 }
 
