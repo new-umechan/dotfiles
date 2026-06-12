@@ -184,6 +184,32 @@
 					},
 					"to": [
 						{ "key_code": "japanese_eisuu" },
+						{ "key_code": "f16" }
+					],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "1",
+						"modifiers": {
+							"mandatory": ["fn"],
+							"optional": ["any"]
+						}
+					},
+					"to": [
+						{ "key_code": "f17" }
+					],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "2",
+						"modifiers": {
+							"mandatory": ["fn"],
+							"optional": ["any"]
+						}
+					},
+					"to": [
 						{ "key_code": "f18" }
 					],
 					"type": "basic"
