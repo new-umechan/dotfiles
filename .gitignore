@@ -52,3 +52,4 @@
 /codex/skills/.system/**
 
 !/.tmux.conf
+.config/flutter
