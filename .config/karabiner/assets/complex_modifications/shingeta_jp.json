@@ -990,6 +990,24 @@
 		"conditions": [
 		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
 		],
+		"from": {"simultaneous": [{"key_code": "i"},{"key_code": "x"}]},
+		"to": [{"key_code": "s"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
+	  },
+
+	  {
+		"type": "basic",
+		"conditions": [
+		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
+		],
+		"from": {"simultaneous": [{"key_code": "o"},{"key_code": "x"}]},
+		"to": [{"key_code": "j"},{"key_code": "e", "repeat": false}]
+	  },
+
+	  {
+		"type": "basic",
+		"conditions": [
+		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
+		],
 		"from": {"simultaneous": [{"key_code": "r"},{"key_code": "g"}]},
 		"to": [{"key_code": "slash", "repeat": false}]
 	  },
@@ -1298,24 +1316,6 @@
 		],
 		"from": {"key_code": "international1"},
 		"to": [{"key_code": "international3", "modifiers": ["left_option"], "repeat": false}]
-	  },
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "i"},{"key_code": "x"}]},
-		"to": [{"key_code": "s"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
-	  },
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "o"},{"key_code": "x"}]},
-		"to": [{"key_code": "j"},{"key_code": "e", "repeat": false}]
 	  }
 	]
   }

@@ -2445,6 +2445,51 @@
                                 ],
                                 "from": {
                                     "simultaneous": [
+                                        { "key_code": "i" },
+                                        { "key_code": "x" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "s" },
+                                    { "key_code": "h" },
+                                    {
+                                        "key_code": "e",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "simultaneous": [
+                                        { "key_code": "o" },
+                                        { "key_code": "x" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "j" },
+                                    {
+                                        "key_code": "e",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "language": "ja" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
+                                "from": {
+                                    "simultaneous": [
                                         { "key_code": "r" },
                                         { "key_code": "g" }
                                     ]
@@ -3031,51 +3076,6 @@
                                     {
                                         "key_code": "international3",
                                         "modifiers": ["left_option"],
-                                        "repeat": false
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "language": "ja" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": {
-                                    "simultaneous": [
-                                        { "key_code": "i" },
-                                        { "key_code": "x" }
-                                    ]
-                                },
-                                "to": [
-                                    { "key_code": "s" },
-                                    { "key_code": "h" },
-                                    {
-                                        "key_code": "e",
-                                        "repeat": false
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "language": "ja" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": {
-                                    "simultaneous": [
-                                        { "key_code": "o" },
-                                        { "key_code": "x" }
-                                    ]
-                                },
-                                "to": [
-                                    { "key_code": "j" },
-                                    {
-                                        "key_code": "e",
                                         "repeat": false
                                     }
                                 ],
@@ -4865,6 +4865,39 @@
                             {
                                 "from": {
                                     "simultaneous": [
+                                        { "key_code": "i" },
+                                        { "key_code": "x" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "s" },
+                                    { "key_code": "h" },
+                                    {
+                                        "key_code": "e",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "simultaneous": [
+                                        { "key_code": "o" },
+                                        { "key_code": "x" }
+                                    ]
+                                },
+                                "to": [
+                                    { "key_code": "j" },
+                                    {
+                                        "key_code": "e",
+                                        "repeat": false
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "simultaneous": [
                                         { "key_code": "r" },
                                         { "key_code": "g" }
                                     ]
@@ -5247,39 +5280,6 @@
                                     {
                                         "key_code": "international3",
                                         "modifiers": ["left_option"],
-                                        "repeat": false
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        { "key_code": "i" },
-                                        { "key_code": "x" }
-                                    ]
-                                },
-                                "to": [
-                                    { "key_code": "s" },
-                                    { "key_code": "h" },
-                                    {
-                                        "key_code": "e",
-                                        "repeat": false
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        { "key_code": "o" },
-                                        { "key_code": "x" }
-                                    ]
-                                },
-                                "to": [
-                                    { "key_code": "j" },
-                                    {
-                                        "key_code": "e",
                                         "repeat": false
                                     }
                                 ],
