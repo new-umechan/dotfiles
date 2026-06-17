@@ -12,23 +12,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "1"}]},
 		"to": [{"key_code": "l"},{"key_code": "a", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "1"}]},
-		"to": [{"key_code": "l"},{"key_code": "a", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "1"}]},
-		"to": [{"key_code": "l"},{"key_code": "y"},{"key_code": "a", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -38,7 +22,6 @@
 		"to": [{"key_code": "l"},{"key_code": "y"},{"key_code": "a", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -47,23 +30,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "2"}]},
 		"to": [{"key_code": "l"},{"key_code": "i", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "2"}]},
-		"to": [{"key_code": "l"},{"key_code": "i", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "2"}]},
-		"to": [{"key_code": "m"},{"key_code": "y"},{"key_code": "a", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -73,7 +40,6 @@
 		"to": [{"key_code": "m"},{"key_code": "y"},{"key_code": "a", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -82,23 +48,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "3"}]},
 		"to": [{"key_code": "l"},{"key_code": "u", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "3"}]},
-		"to": [{"key_code": "l"},{"key_code": "u", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "3"}]},
-		"to": [{"key_code": "m"},{"key_code": "y"},{"key_code": "u", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -108,7 +58,6 @@
 		"to": [{"key_code": "m"},{"key_code": "y"},{"key_code": "u", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -117,23 +66,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "4"}]},
 		"to": [{"key_code": "l"},{"key_code": "e", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "4"}]},
-		"to": [{"key_code": "l"},{"key_code": "e", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "4"}]},
-		"to": [{"key_code": "m"},{"key_code": "y"},{"key_code": "o", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -143,7 +76,6 @@
 		"to": [{"key_code": "m"},{"key_code": "y"},{"key_code": "o", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -152,23 +84,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "5"}]},
 		"to": [{"key_code": "l"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "5"}]},
-		"to": [{"key_code": "l"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "5"}]},
-		"to": [{"key_code": "l"},{"key_code": "w"},{"key_code": "a", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -178,15 +94,6 @@
 		"to": [{"key_code": "l"},{"key_code": "w"},{"key_code": "a", "repeat": false}]
 	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "7"}]},
-		"to": [{"key_code": "comma", "modifiers": ["left_option"], "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -204,24 +111,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "7"}]},
 		"to": [{"key_code": "period", "modifiers": ["left_option"], "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "7"}]},
-		"to": [{"key_code": "period", "modifiers": ["left_option"], "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "8"}]},
-		"to": [{"key_code": "close_bracket", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -237,26 +127,9 @@
 		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
 		],
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "8"}]},
-		"to": [{"key_code": "8","modifiers": ["shift"], "repeat": false}]
-	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "8"}]},
-		"to": [{"key_code": "8","modifiers": ["shift"], "repeat": false}]
+		"to": [{"key_code": "8", "modifiers": ["shift"], "repeat": false}]
 	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "9"}]},
-		"to": [{"key_code": "backslash", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -272,26 +145,9 @@
 		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
 		],
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "9"}]},
-		"to": [{"key_code": "9","modifiers": ["shift"], "repeat": false}]
-	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "9"}]},
-		"to": [{"key_code": "9","modifiers": ["shift"], "repeat": false}]
+		"to": [{"key_code": "9", "modifiers": ["shift"], "repeat": false}]
 	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "0"}]},
-		"to": [{"key_code": "semicolon", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -309,24 +165,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "0"}]},
 		"to": [{"key_code": "quote", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "0"}]},
-		"to": [{"key_code": "quote", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "hyphen"}]},
-		"to": [{"key_code": "open_bracket", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -344,16 +183,6 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "hyphen"}]},
 		"to": [{"key_code": "quote", "modifiers": ["shift"], "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "hyphen"}]},
-		"to": [{"key_code": "quote", "modifiers": ["shift"], "repeat": false}]
-	  },
-
-
 
 	  {
 		"type": "basic",
@@ -363,23 +192,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "q"}]},
 		"to": [{"key_code": "f"},{"key_code": "a", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "q"}]},
-		"to": [{"key_code": "f"},{"key_code": "a", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "q"}]},
-		"to": [{"key_code": "d"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -389,7 +202,6 @@
 		"to": [{"key_code": "d"},{"key_code": "i", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -398,23 +210,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "w"}]},
 		"to": [{"key_code": "g"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "w"}]},
-		"to": [{"key_code": "g"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "w"}]},
-		"to": [{"key_code": "m"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -424,7 +220,6 @@
 		"to": [{"key_code": "m"},{"key_code": "e", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -433,23 +228,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "e"}]},
 		"to": [{"key_code": "f"},{"key_code": "u", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "e"}]},
-		"to": [{"key_code": "f"},{"key_code": "u", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "e"}]},
-		"to": [{"key_code": "k"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -459,7 +238,6 @@
 		"to": [{"key_code": "k"},{"key_code": "e", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -468,23 +246,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "r"}]},
 		"to": [{"key_code": "f"},{"key_code": "i", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "r"}]},
-		"to": [{"key_code": "f"},{"key_code": "i", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "r"}]},
-		"to": [{"key_code": "t"},{"key_code": "h"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -494,7 +256,6 @@
 		"to": [{"key_code": "t"},{"key_code": "h"},{"key_code": "i", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -503,23 +264,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "t"}]},
 		"to": [{"key_code": "f"},{"key_code": "e", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "t"}]},
-		"to": [{"key_code": "f"},{"key_code": "e", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "t"}]},
-		"to": [{"key_code": "d"},{"key_code": "h"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -529,15 +274,6 @@
 		"to": [{"key_code": "d"},{"key_code": "h"},{"key_code": "i", "repeat": false}]
 	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "y"}]},
-		"to": [{"key_code": "w"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -555,24 +291,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "y"}]},
 		"to": [{"key_code": "s"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "y"}]},
-		"to": [{"key_code": "s"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "u"}]},
-		"to": [{"key_code": "p"},{"key_code": "a", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -590,24 +309,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "u"}]},
 		"to": [{"key_code": "p"},{"key_code": "e", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "u"}]},
-		"to": [{"key_code": "p"},{"key_code": "e", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "i"}]},
-		"to": [{"key_code": "y"},{"key_code": "o", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -625,24 +327,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "i"}]},
 		"to": [{"key_code": "d"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "i"}]},
-		"to": [{"key_code": "d"},{"key_code": "o", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "o"}]},
-		"to": [{"key_code": "m"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -660,24 +345,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "o"}]},
 		"to": [{"key_code": "y"},{"key_code": "a", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "o"}]},
-		"to": [{"key_code": "y"},{"key_code": "a", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "p"}]},
-		"to": [{"key_code": "w"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -695,24 +363,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "p"}]},
 		"to": [{"key_code": "j"},{"key_code": "e", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "p"}]},
-		"to": [{"key_code": "j"},{"key_code": "e", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "open_bracket"}]},
-		"to": [{"key_code": "u"},{"key_code": "l"},{"key_code": "o", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -722,8 +373,6 @@
 		"to": [{"key_code": "u"},{"key_code": "l"},{"key_code": "o", "repeat": false}]
 	  },
 
-
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -732,23 +381,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "a"}]},
 		"to": [{"key_code": "h"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "a"}]},
-		"to": [{"key_code": "h"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "a"}]},
-		"to": [{"key_code": "w"},{"key_code": "o", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -758,21 +391,12 @@
 		"to": [{"key_code": "w"},{"key_code": "o", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
 		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
 		],
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "s"}]},
-		"to": [{"key_code": "j"},{"key_code": "i", "repeat": false}]
-	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "s"}]},
 		"to": [{"key_code": "j"},{"key_code": "i", "repeat": false}]
 	  },
 
@@ -784,7 +408,6 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "l"}]},
 		"to": [{"key_code": "s"},{"key_code": "a", "repeat": false}]
 	  },
-
 
 	  {
 		"type": "basic",
@@ -800,18 +423,9 @@
 		"conditions": [
 		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
 		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "d"}]},
-		"to": [{"key_code": "o", "repeat": false}]
-	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
 		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "d"}]},
 		"to": [{"key_code": "o", "repeat": false}]
 	  },
-
 
 	  {
 		"type": "basic",
@@ -821,23 +435,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "f"}]},
 		"to": [{"key_code": "m"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "f"}]},
-		"to": [{"key_code": "m"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "f"}]},
-		"to": [{"key_code": "r"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -847,7 +445,6 @@
 		"to": [{"key_code": "r"},{"key_code": "i", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -856,23 +453,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "g"}]},
 		"to": [{"key_code": "y"},{"key_code": "u", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "g"}]},
-		"to": [{"key_code": "y"},{"key_code": "u", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "g"}]},
-		"to": [{"key_code": "z"},{"key_code": "u", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -882,15 +463,6 @@
 		"to": [{"key_code": "z"},{"key_code": "u", "repeat": false}]
 	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "h"}]},
-		"to": [{"key_code": "h"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -908,24 +480,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "h"}]},
 		"to": [{"key_code": "b"},{"key_code": "i", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "h"}]},
-		"to": [{"key_code": "b"},{"key_code": "i", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "j"}]},
-		"to": [{"key_code": "a", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -943,35 +498,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "j"}]},
 		"to": [{"key_code": "r"},{"key_code": "a", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "j"}]},
-		"to": [{"key_code": "r"},{"key_code": "a", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "l"}]},
-		"to": [{"key_code": "j"},{"key_code": "i", "repeat": false}]
-	  },
-
-
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "semicolon"}]},
-		"to": [{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -989,16 +516,6 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "semicolon"}]},
 		"to": [{"key_code": "s"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "semicolon"}]},
-		"to": [{"key_code": "s"},{"key_code": "o", "repeat": false}]
-	  },
-
-
 
 	  {
 		"type": "basic",
@@ -1008,23 +525,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "z"}]},
 		"to": [{"key_code": "d"},{"key_code": "u", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "z"}]},
-		"to": [{"key_code": "d"},{"key_code": "u", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "z"}]},
-		"to": [{"key_code": "z"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1034,7 +535,6 @@
 		"to": [{"key_code": "z"},{"key_code": "e", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1043,23 +543,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "x"}]},
 		"to": [{"key_code": "z"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "x"}]},
-		"to": [{"key_code": "z"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "x"}]},
-		"to": [{"key_code": "z"},{"key_code": "a", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1069,7 +553,6 @@
 		"to": [{"key_code": "z"},{"key_code": "a", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1078,23 +561,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "c"}]},
 		"to": [{"key_code": "b"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "c"}]},
-		"to": [{"key_code": "b"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "c"}]},
-		"to": [{"key_code": "g"},{"key_code": "i", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1104,7 +571,6 @@
 		"to": [{"key_code": "g"},{"key_code": "i", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1113,23 +579,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "v"}]},
 		"to": [{"key_code": "m"},{"key_code": "u", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "v"}]},
-		"to": [{"key_code": "m"},{"key_code": "u", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "v"}]},
-		"to": [{"key_code": "r"},{"key_code": "o", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1139,7 +589,6 @@
 		"to": [{"key_code": "r"},{"key_code": "o", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1148,23 +597,7 @@
 		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "b"}]},
 		"to": [{"key_code": "f"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "d"},{"key_code": "b"}]},
-		"to": [{"key_code": "f"},{"key_code": "o", "repeat": false}]
-	  },
 
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "b"}]},
-		"to": [{"key_code": "n"},{"key_code": "u", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1174,15 +607,6 @@
 		"to": [{"key_code": "n"},{"key_code": "u", "repeat": false}]
 	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "n"}]},
-		"to": [{"key_code": "s"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1200,24 +624,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "n"}]},
 		"to": [{"key_code": "w"},{"key_code": "a", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "n"}]},
-		"to": [{"key_code": "w"},{"key_code": "a", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "m"}]},
-		"to": [{"key_code": "n"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1235,24 +642,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "m"}]},
 		"to": [{"key_code": "d"},{"key_code": "a", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "m"}]},
-		"to": [{"key_code": "d"},{"key_code": "a", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "comma"}]},
-		"to": [{"key_code": "b"},{"key_code": "e", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1270,24 +660,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "comma"}]},
 		"to": [{"key_code": "p"},{"key_code": "i", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "comma"}]},
-		"to": [{"key_code": "p"},{"key_code": "i", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "period"}]},
-		"to": [{"key_code": "p"},{"key_code": "u", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1305,24 +678,7 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "period"}]},
 		"to": [{"key_code": "p"},{"key_code": "o", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "period"}]},
-		"to": [{"key_code": "p"},{"key_code": "o", "repeat": false}]
-	  },
 
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "k"},{"key_code": "slash"}]},
-		"to": [{"key_code": "v"},{"key_code": "u", "repeat": false}]
-	  },
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1340,16 +696,6 @@
 		"from": {"simultaneous": [{"key_code": "s"},{"key_code": "slash"}]},
 		"to": [{"key_code": "c"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
 	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "l"},{"key_code": "slash"}]},
-		"to": [{"key_code": "c"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
-	  },
-
-
 
 	  {
 		"type": "basic",
@@ -1386,7 +732,6 @@
 		"from": {"simultaneous": [{"key_code": "i"},{"key_code": "4"}]},
 		"to": [{"key_code": "b"},{"key_code": "y"},{"key_code": "o", "repeat": false}]
 	  },
-
 
 	  {
 		"type": "basic",
@@ -1433,7 +778,6 @@
 		"to": [{"key_code": "c"},{"key_code": "h"},{"key_code": "u", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1460,7 +804,6 @@
 		"from": {"simultaneous": [{"key_code": "i"},{"key_code": "g"}]},
 		"to": [{"key_code": "c"},{"key_code": "h"},{"key_code": "o", "repeat": false}]
 	  },
-
 
 	  {
 		"type": "basic",
@@ -1498,8 +841,6 @@
 		"to": [{"key_code": "c"},{"key_code": "h"},{"key_code": "a", "repeat": false}]
 	  },
 
-
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1535,7 +876,6 @@
 		"from": {"simultaneous": [{"key_code": "o"},{"key_code": "4"}]},
 		"to": [{"key_code": "p"},{"key_code": "y"},{"key_code": "o", "repeat": false}]
 	  },
-
 
 	  {
 		"type": "basic",
@@ -1582,7 +922,6 @@
 		"to": [{"key_code": "n"},{"key_code": "y"},{"key_code": "u", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1609,7 +948,6 @@
 		"from": {"simultaneous": [{"key_code": "o"},{"key_code": "g"}]},
 		"to": [{"key_code": "n"},{"key_code": "y"},{"key_code": "o", "repeat": false}]
 	  },
-
 
 	  {
 		"type": "basic",
@@ -1647,8 +985,6 @@
 		"to": [{"key_code": "n"},{"key_code": "y"},{"key_code": "a", "repeat": false}]
 	  },
 
-
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1657,6 +993,7 @@
 		"from": {"simultaneous": [{"key_code": "r"},{"key_code": "g"}]},
 		"to": [{"key_code": "slash", "repeat": false}]
 	  },
+
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1665,62 +1002,6 @@
 		"from": {"simultaneous": [{"key_code": "r"},{"key_code": "f"}]},
 		"to": [{"key_code": "slash", "repeat": false}]
 	  },
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "f"},{"key_code": "v"}]},
-		"to": [{"key_code": "1", "modifiers": ["left_shift"], "repeat": false}]
-	  },
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "f"},{"key_code": "b"}]},
-		"to": [{"key_code": "1", "modifiers": ["left_shift"], "repeat": false}]
-	  },
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "f"},{"key_code": "g"}]},
-		"to": [{"key_code": "close_bracket"},{"key_code": "backslash", "repeat": false}]
-	  },
-
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "u"},{"key_code": "h"}]},
-		"to": [{"key_code": "international3", "repeat": false}]
-	  },
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "j"},{"key_code": "n"}]},
-		"to": [{"key_code": "slash", "modifiers": ["left_shift"], "repeat": false}]
-	  },
-
-	  {
-		"type": "basic",
-		"conditions": [
-		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
-		],
-		"from": {"simultaneous": [{"key_code": "h"},{"key_code": "j"}]},
-		"to": [{"key_code": "8", "modifiers": ["left_shift"]},{"key_code": "9", "modifiers": ["left_shift"], "repeat": false}]
-	  },
-
-
 
 	  {
 		"type": "basic",
@@ -1821,7 +1102,6 @@
 		"to": [{"key_code": "g"},{"key_code": "e", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -1921,7 +1201,6 @@
 		"to": [{"key_code": "delete_or_backspace", "repeat": false}]
 	  },
 
-
 	  {
 		"type": "basic",
 		"conditions": [
@@ -2019,6 +1298,24 @@
 		],
 		"from": {"key_code": "international1"},
 		"to": [{"key_code": "international3", "modifiers": ["left_option"], "repeat": false}]
+	  },
+
+	  {
+		"type": "basic",
+		"conditions": [
+		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
+		],
+		"from": {"simultaneous": [{"key_code": "i"},{"key_code": "x"}]},
+		"to": [{"key_code": "s"},{"key_code": "h"},{"key_code": "e", "repeat": false}]
+	  },
+
+	  {
+		"type": "basic",
+		"conditions": [
+		  {"type": "input_source_if","input_sources": [{"language": "ja"}]}
+		],
+		"from": {"simultaneous": [{"key_code": "o"},{"key_code": "x"}]},
+		"to": [{"key_code": "j"},{"key_code": "e", "repeat": false}]
 	  }
 	]
   }
