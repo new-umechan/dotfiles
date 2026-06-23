@@ -1,4 +1,4 @@
-model = "gpt-5.5"
+model = "gpt-5.4"
 model_reasoning_effort = "medium"
 personality = "pragmatic"
 sandbox_mode = "danger-full-access"
@@ -10,6 +10,7 @@ suppress_unstable_features_warning = true
 # args = ["-y", "mcp-remote", "http://127.0.0.1:3845/sse"]
 
 cli_auth_credentials_store = "file"
+service_tier = "default"
 
 [sandbox_workspace_write]
 network_access = true
@@ -132,6 +133,9 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/home/ume/dotfiles"]
+trust_level = "trusted"
+
+[projects."/home/ume"]
 trust_level = "trusted"
 
 [notice]

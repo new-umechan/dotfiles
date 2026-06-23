@@ -30,20 +30,49 @@ vim.o.relativenumber = true
 -- 幅を設定
 vim.o.numberwidth = 3
 
--- SSH先ではOSC 52でローカル端末のクリップボードへコピーする
+-- SSH先ではOSC 52でローカル端末のクリップボードへコピーする。
+-- WezTermはOSC 52のclipboard queryを無視するため、ローカルclipboardの読み出しはできない。
+-- そのためpasteは直近のyankキャッシュに限定し、ローカル側の貼り付けは端末のpasteを使う。
 if vim.env.SSH_TTY or vim.env.SSH_CONNECTION then
     local osc52 = require('vim.ui.clipboard.osc52')
+    local clipboard_cache = {
+        ['+'] = { {}, 'v' },
+        ['*'] = { {}, 'v' },
+    }
+
+    local function save_cache(reg, lines, regtype)
+        clipboard_cache[reg] = { vim.deepcopy(lines), regtype or 'v' }
+    end
+
+    local function get_cache(reg)
+        return { vim.deepcopy(clipboard_cache[reg][1]), clipboard_cache[reg][2] }
+    end
+
+    local function copy_with_cache(reg)
+        local osc52_copy = osc52.copy(reg)
+        return function(lines, regtype)
+            save_cache(reg, lines, regtype)
+            osc52_copy(lines, regtype)
+        end
+    end
+
+    local function paste_with_cache(reg)
+        return function()
+            return get_cache(reg)
+        end
+    end
 
     vim.g.clipboard = {
         name = 'OSC 52',
         copy = {
-            ['+'] = osc52.copy('+'),
-            ['*'] = osc52.copy('*'),
+            ['+'] = copy_with_cache('+'),
+            ['*'] = copy_with_cache('*'),
         },
         paste = {
-            ['+'] = osc52.paste('+'),
-            ['*'] = osc52.paste('*'),
+            ['+'] = paste_with_cache('+'),
+            ['*'] = paste_with_cache('*'),
         },
+        cache_enabled = 0,
     }
 end
 
