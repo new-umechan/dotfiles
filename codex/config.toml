@@ -1,4 +1,4 @@
-model = "gpt-5.4"
+model = "gpt-5.4-mini"
 model_reasoning_effort = "medium"
 personality = "pragmatic"
 sandbox_mode = "danger-full-access"
@@ -136,6 +136,9 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/home/ume"]
+trust_level = "trusted"
+
+[projects."/home/ume/prog/pokemon_tcg_ai"]
 trust_level = "trusted"
 
 [notice]
